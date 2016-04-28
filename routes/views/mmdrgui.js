@@ -2,6 +2,7 @@ var async = require('async'),
 keystone = require('keystone');
 var Mmdr = keystone.list('Mmdr');
 var uuid = require('node-uuid');
+const a = require('../functions/crawl');
 
 exports = module.exports = function(req, res) {
 	
@@ -44,7 +45,10 @@ exports = module.exports = function(req, res) {
 					 // post has been saved	
 					 console.log(err);
 				});
-				
+
+				//Here goes Kue message broker function
+				a.newJob(val[i]);
+
 			}
 		});
 	}

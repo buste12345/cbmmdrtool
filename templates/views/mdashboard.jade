@@ -1,12 +1,9 @@
 extends ../layouts/default
 
-block intro
-	.container
-		h1 MRs submissions
-
 block content
-	.container: .row
-		.col-sm-8.col-md-9
+	.container: .row: .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
+		article
+			h1 MRs submissions
 			if !data.mmdrs
 				h3.text-muted Error. No results.
 			else
@@ -16,3 +13,5 @@ block content
 					for mmdr in data.mmdrs
 						tr
 							td= mmdr
+							td
+								a(href='/mgui') Crawl

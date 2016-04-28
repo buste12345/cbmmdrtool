@@ -1,0 +1,18 @@
+extends ../layouts/default
+
+block intro
+	.container
+		h1 MRs submissions
+
+block content
+	.container: .row
+		.col-sm-8.col-md-9
+			if !data.mmdrs
+				h3.text-muted Error. No results.
+			else
+				table
+					thead
+					tbody
+					for mmdr in data.mmdrs
+						tr
+							td= mmdr

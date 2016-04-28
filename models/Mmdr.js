@@ -22,7 +22,8 @@ Mmdr.add({
 	fieldmapping: { type: String },
 	batch: { type: String },
 	batch2: { type: String },
-	state: { type: String }
+	state: { type: String },
+	groupid: { type: String }
 });
 
 /*

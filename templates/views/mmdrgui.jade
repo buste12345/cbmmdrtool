@@ -1,0 +1,17 @@
+extends ../layouts/default
+
+block content
+	.container: .row: .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
+		article
+			if !data.groupid
+				h1 Insert MR DIDs with an enter between each element
+				form(name="add-mmdrs", method="post",action="/mgui")
+					div.input
+						p MR DIDs
+						textarea(name="mrdids", cols="40", rows="10")
+					div.actions
+						input(type="submit", value="Add")
+			else
+				p= ('ID ASSIGNED IS: ' + data.groupid)
+				
+

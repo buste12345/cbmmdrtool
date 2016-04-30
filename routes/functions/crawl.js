@@ -10,14 +10,13 @@ function newJob (val){
 }
 
 
-jobs.process('crawlmrdid', function (job, done){
+jobs.process('crawlmrdid', 5, function (job, done){
  console.log('Job', job.id, 'is done. MR DID: ',job.data.mrdid);
  
  done && done();
 })
 
 var methods = {};
-
 methods.newJob = function(val){ 
     newJob(val);
 };

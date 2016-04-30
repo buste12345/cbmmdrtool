@@ -42,7 +42,7 @@ exports = module.exports = function(req, res) {
 				console.log(newMr);
 				
 				newMr.save(function(err) {
-					 // post has been saved	
+					 // post has been save
 					 console.log(err);
 				});
 

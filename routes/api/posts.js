@@ -34,6 +34,22 @@ exports.get = function(req, res) {
 	});
 }
 
+/**
+ * Get last pending MMDR
+ */
+exports.get = function(req, res) {
+	Post.model.findById(req.params.id).exec(function(err, item) {
+		
+		if (err) return res.apiError('database error', err);
+		if (!item) return res.apiError('not found');
+		
+		res.send({
+			post: item
+		});
+		
+	});
+}
+
 
 /**
  * Create a Post

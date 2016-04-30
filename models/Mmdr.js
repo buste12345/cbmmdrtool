@@ -23,7 +23,9 @@ Mmdr.add({
 	batch: { type: String },
 	batch2: { type: String },
 	state: { type: String },
-	groupid: { type: String }
+	groupid: { type: String },
+	createdAt: { type: Date, default: Date.now },
+	assignedBot: { type: String }
 });
 
 /*

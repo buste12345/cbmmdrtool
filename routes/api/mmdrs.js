@@ -19,7 +19,7 @@ exports.list = function(req, res) {
 }
 */
 /**
- * Get Post by ID
+ * Get mmdr by ID
  */
 exports.get = function(req, res) {
 	Mmdr.model.findById(req.params.mrdid).exec(function(err, item) {
@@ -31,6 +31,31 @@ exports.get = function(req, res) {
 			post: item
 		});
 		
+	});
+}
+
+/**
+ * Get last pending MMDR
+ */
+exports.getlast = function(req, res) {
+	Mmdr.model.findOne().where('state', 'pending').sort({createdAt: 1}).exec(function(err, item) {
+		
+		if (err) return res.apiError('database error', err);
+		if (!item) return res.apiError('not found');
+		if(req.query.assign == "true" && req.query.robotname)
+		{
+			console.log("Robot working on "+item.mrdid);
+			Mmdr.model.findOneAndUpdate({_id:item.id},{state:'progress',assignedBot:req.query.robotname}).exec(function(err, item) 
+			{
+				console.log(err);
+			});
+		}
+		
+		res.send({
+			did: item.id,
+			mrdid: item.mrdid,
+			state: item.state
+		});
 	});
 }
 

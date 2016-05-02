@@ -39,7 +39,6 @@ exports = module.exports = function(req, res) {
 				 groupid: uuid4
 				});
 				
-				console.log(newMr);
 				
 				newMr.save(function(err) {
 					 // post has been save
@@ -47,7 +46,7 @@ exports = module.exports = function(req, res) {
 				});
 
 				//Here goes Kue message broker function
-				a.newJob(val[i]);
+				a.newJob(val[i],newMr.id);
 
 			}
 		});

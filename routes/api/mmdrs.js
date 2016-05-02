@@ -36,7 +36,7 @@ exports.get = function(req, res) {
 
 /**
  * Get last pending MMDR
- */
+ */ 
 exports.getlast = function(req, res) {
 	Mmdr.model.findOne().where('state', 'pending').sort({createdAt: 1}).exec(function(err, item) {
 		
@@ -122,3 +122,15 @@ exports.remove = function(req, res) {
 		
 	});
 } */
+
+exports.topley = function(idd,callback){
+	Mmdr.model.findOne({_id:idd}).exec(function(err, item) 
+	{
+		//console.log("frying pan");
+		//console.log(item);
+		if(item.state=="completed")
+		{
+		    callback();
+		}
+    });
+}

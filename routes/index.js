@@ -53,12 +53,12 @@ exports = module.exports = function(app) {
 	app.all('/api/post/:id/update', keystone.middleware.api, routes.api.posts.update);
 	app.get('/api/post/:id/remove', keystone.middleware.api, routes.api.posts.remove);
 	
+	app.all('/api/mmdr/bothome', keystone.middleware.api, routes.api.mmdrs.bothome);
+	app.all('/api/mmdr/updatemmdr', keystone.middleware.api, routes.api.mmdrs.updatemmdr);
 	app.get('/api/mmdr/getlast', keystone.middleware.api, routes.api.mmdrs.getlast);
 	app.all('/api/mmdr/create', keystone.middleware.api, routes.api.mmdrs.create);
 	app.get('/api/mmdr/:mrdid', keystone.middleware.api, routes.api.mmdrs.get);
 
-	app.get('/api/mmdr/:mrdid', keystone.middleware.api, routes.api.mmdrs.get);
-	
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);
 	

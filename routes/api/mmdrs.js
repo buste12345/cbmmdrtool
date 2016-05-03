@@ -2,6 +2,7 @@ var async = require('async'),
 	keystone = require('keystone');
 
 var Mmdr = keystone.list('Mmdr');
+//var bodyParser = require('body-parser');
 
 /**
  * List Posts
@@ -57,6 +58,53 @@ exports.getlast = function(req, res) {
 			state: item.state
 		});
 	});
+}
+
+/**
+ * Bot home
+ */ 
+exports.bothome = function(req, res) {
+	
+	res.send("This is your home bot.");
+	
+}
+
+/**
+ * Update mmdr MMDR
+ */ 
+exports.updatemmdr = function(req, res) {
+			console.log(req.body);
+			console.log(req.params);
+			console.log(req.query);
+			
+			req.on('data', function(chunk) {
+      		console.log("Received body data:");
+      		console.log(chunk.toString());
+      		var obj = JSON.parse(chunk);
+      				Mmdr.model.findOneAndUpdate({_id:obj.did,state:'progress'},obj.body).exec(function(err, item) 
+					{
+				
+						if(err)
+						{
+							console.log(err);
+					
+						}
+				
+						if(item)
+							res.send(item);
+						else
+							res.send("No item");
+			});
+    		});
+			
+
+			
+			
+
+   
+		
+
+	
 }
 
 

@@ -1,0 +1,509 @@
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"de310a4f63","applicationID":"11354933","transactionName":"M1FWYRdXWBdRU0deDAobdWY1GXccWV9eGAIHV1tAC0IZBVNTXEINEEJdUBIYVxdASA==","queueTime":0,"applicationTime":11371,"ttGuid":"8CC93118C9801B77","agent":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o  )r(n[o]);return r}({1:[function(e,t,n){function r(e,t){return function(){o(e,[(new Date).getTime()].concat(a(arguments)),null,t)}}var o=e("handle"),i=e(2),a=e(3);"undefined"==typeof window.newrelic&&(newrelic=NREUM);var u=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit"],c=["addPageAction"],f="api-";i(u,function(e,t){newrelic[t]=r(f t,"api")}),i(c,function(e,t){newrelic[t]=r(f t)}),t.exports=newrelic,newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),o("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i =1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(0>o?0:o);  r<o;)i[r]=e[t r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?u(e,a,i):i()}function n(n,r,o){e&&e(n,r,o);for(var i=t(o),a=l(n),u=a.length,c=0;u>c;c  )a[c].apply(i,r);var s=f[g[n]];return s&&s.push([m,n,r,i]),i}function p(e,t){w[e]=l(e).concat(t)}function l(e){return w[e]||[]}function d(e){return s[e]=s[e]||o(n)}function v(e,t){c(e,function(e,n){t=t||"feature",g[n]=t,t in f||(f[t]=[])})}var w={},g={},m={on:p,emit:n,get:d,listeners:l,context:t,buffer:v};return m}function i(){return new r}var a="nr@context",u=e("gos"),c=e(2),f={},s={},p=t.exports=o();p.backlog=f},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o  })}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!w  ){var e=v.info=NREUM.info,t=s.getElementsByTagName("script")[0];if(e&&e.licenseKey&&e.applicationID&&t){c(l,function(t,n){e[t]||(e[t]=n)});var n="https"===p.split(":")[0]||e.sslForHttp;v.proto=n?"https://":"http://",u("mark",["onload",a()],null,"api");var r=s.createElement("script");r.src=v.proto e.agent,t.parentNode.insertBefore(r,t)}}}function o(){"complete"===s.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=window,s=f.document;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:f.XMLHttpRequest,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},e(1);var p="" location,l={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-918.min.js"},d=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),v=t.exports={offset:a(),origin:p,features:{},xhrWrappable:d};s.addEventListener?(s.addEventListener("DOMContentLoaded",i,!1),f.addEventListener("load",r,!1)):(s.attachEvent("onreadystatechange",o),f.attachEvent("onload",r)),u("mark",["firstbyte",a()],null,"api");var w=0},{}]},{},["loader"]);</script>
+    <title>Axiom View Account Information:American Intercontinental University</title>
+
+    <LINK href="/Axiom/Buttons.css" rel="stylesheet" type="text/css" /><script language='javascript' type='text/javascript'>
+function OnDialClick(CBExtension,DestinationPhoneNumber,TableName,RecordID,ProgressControlID) {
+try {
+$('#'   ProgressControlID).css('display','');
+var JSONData;
+JSONData = "{ CBExtension: '"   $("#"   CBExtension).val()   "', ";
+JSONData  = "DestinationPhoneNumber: '"   $("#"   DestinationPhoneNumber).val()   "', ";
+JSONData  = "TableName: '"   $("#"   TableName).val()   "', ";
+JSONData  = "RecordID: '"   $("#"   RecordID).val()   "' } ";
+$.ajax({
+type: 'POST',
+contentType: 'application/json; charset=utf-8', 
+dataType: 'json', 
+url: '/Axiom/AJAXCallbackWebServices/ClickToDialService.asmx/DialPhoneNumber',
+data: JSONData,
+success: function(data, status, request) {
+if (data.d != '') { alert('An error occurred while dialing: '   data.d); }
+},
+complete: function(request, status) {
+$('#'   ProgressControlID).css('display','none');
+},
+error: function(request, status, error) {
+alert('An error occurred while dialing: '   status   ' '   error);
+}
+});  
+}
+catch (err) {
+alert(err.description);
+}
+return false;
+}
+</script>
+
+    <style> .cb_style table { text-align: left; } </style>
+
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+  m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        
+        ga('create', 'UA-44064773-1', 'careerbuilder.com');
+        var dimensionValue = 'prodriguez';
+        ga('send', 'pageview', {'dimension1': dimensionValue});
+
+</script>
+</head>
+<body text="#333333" vlink="#666666" alink="black" link="#000099" bgcolor="white" leftmargin="0" topmargin="0" style="margin:0; padding:0;">
+    <table id="tblAxiomHeader" cellspacing="0" cellpadding="0" border="0" style="width: 100%; min-width:1000px;">
+        <tr>
+            <td>
+                &nbsp;
+            </td>
+            <td width="200" align="left" valign="top">
+                <a href="/axiom/">
+                    <img src="/Axiom/Images/axiom.gif" id="imgAxiom" alt="Axiom - A BackOffice System" border="0" />
+                </a>
+                <br/>
+            </td>
+            <td align="left">
+                <table id="tblBanner" border="0" style="font-family:arial,helvetica;font-weight:bold;">
+	<tr>
+		<td align="left" style="color:#FFFFFF;font-size:20pt;font-weight:bold;">BOSS </td>
+	</tr>
+</table>
+            </td>
+            <td width="700" valign="top">
+                <table>
+                    <tr>
+                        <td align="right">
+                            <!--<img src="/Axiom/Images/pixel.gif" width="1" height="12"><br>-->
+                            <a href="http://www.careerbuilder.com">
+                                <img src="/Axiom/Images/logoCB.gif" id="imgLogoCB" width="180" height="40" alt="CareerBuilder.com" border="0" /></a>
+                            <!--<br>
+									<img src="/Axiom/Images/pixel.gif" width="1" height="13">-->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" width="700">
+                            <table id="tblLogonStatus" border="0" style="font-family:arial,helvetica;">
+	<tr>
+		<td align="left" style="color:#FF6600;"><B Style='FONT-SIZE: 10pt; color:#ff6600'> Welcome Paul Rodriguez</B></td><td align="right" valign="middle" style="color:#FF6600;font-size:8pt;"><b valign='middle'>&nbsp;&#149;<a href=/Axiom/Utilities/UserRequestEntry.aspx target=_new Style='text-decoration:none; FONT-SIZE: 8pt; color:#ff6600' " onmouseover="this.style.color='#000066'" " onmouseout="this.style.color='#ff6600'">&nbsp;Contact Us</a></b><b valign='middle'>&nbsp;&#149;<a href=/Axiom/Index.aspx Style='text-decoration:none; FONT-SIZE: 8pt; color:#ff6600' " onmouseover="this.style.color='#000066'" " onmouseout="this.style.color='#ff6600'">&nbsp;Home</a></b></td>
+	</tr>
+</table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <link rel="stylesheet" type="text/css" href="/Axiom/Images/menu.css"><script language="javascript" src="/Axiom/Images/menu.js"></script> <?xml version="1.0" encoding="utf-16"?><DIV ID="divMenuBar"><TABLE ID="tblMenuBar" BORDER="0"><TR><TD CLASS="clsMenuBarItem" ID="tdMenuBarItemAccount">Account</TD><TD>|</TD><TD CLASS="clsMenuBarItem" ID="tdMenuBarItemOrder">Order</TD><TD>|</TD><TD CLASS="clsMenuBarItem"><A STYLE="text-decoration:none" HREF="/Axiom/User/UserSearch.aspx">User</A></TD><TD>|</TD><TD CLASS="clsMenuBarItem" ID="tdMenuBarItemA/R">A/R</TD><TD>|</TD><TD CLASS="clsMenuBarItem"><A STYLE="text-decoration:none" HREF="/Axiom/Job/JobSearchV2.aspx">Job</A></TD><TD>|</TD><TD CLASS="clsMenuBarItem"><A STYLE="text-decoration:none" HREF="/Axiom/DIDSearch.aspx">DID</A></TD><TD>|</TD><TD CLASS="clsMenuBarItem" ID="tdMenuBarItemIntegration">Integration</TD><TD>|</TD><TD CLASS="clsMenuBarItem" ID="tdMenuBarItemCustomerSupport">CustomerSupport</TD><TD>|</TD><TD CLASS="clsMenuBarItem" ID="tdMenuBarItemUtility">Utility</TD><TD>|</TD><TD CLASS="clsMenuBarItem"><A STYLE="text-decoration:none" HREF="javascript:void(window.open('/Axiom/CallTrack/CallTrackerV2.aspx?flyout=false&amp;axiomtemplate=false', null, 'width=900,height=700,scrollbars=1,resizable=1'));">Call Tracker</A></TD></TR></TABLE></DIV><DIV CLASS="clsMenu" ID="divMenuAccount"><DIV CLASS="clsMenuSpacer"><b /></DIV><DIV><A HREF="/Axiom/Account/AccountSearch.aspx">Account Search</A></DIV></DIV><DIV CLASS="clsMenu" ID="divMenuOrder"><DIV CLASS="clsMenuSpacer"><b /></DIV><DIV><A HREF="/Axiom/Order/OrderSearch.aspx">Order Search</A></DIV></DIV><DIV CLASS="clsMenu" ID="divMenuA/R"><DIV CLASS="clsMenuSpacer"><b /></DIV><DIV><A HREF="/Axiom/AR/CCTransSearch.aspx">Electronic Payment Trans Search</A></DIV><DIV><A HREF="/Axiom/AR/CCTransByCCType.aspx">Successful Credit Card Trans</A></DIV><DIV><A HREF="/Axiom/Financial/AR/InvoiceSearch.aspx">Invoice Search</A></DIV><DIV><A HREF="/Axiom/Financial/AR/PaymentCheckSearch.aspx">Payment/Check Search</A></DIV><DIV><A HREF="/Axiom/Financial/AR/ARSearch.aspx">AR Search</A></DIV><DIV><A HREF="/Axiom/Financial/Invoice/Credit/CreditRequestSearch.aspx">Credit Memo Request Search</A></DIV></DIV><DIV CLASS="clsMenu" ID="divMenuIntegration"><DIV CLASS="clsMenuSpacer"><b /></DIV><DIV><A HREF="http://dpi.careerbuilder.com/Site/Support/FindDPIUser/FindDPIUser.aspx">Find DPI User</A></DIV><DIV><A HREF="http://www.fuzeqna.com/careerbuilder/ext/kbdetail_qaonly.asp?kbid=2207">Integration Support Request</A></DIV><DIV><A HREF="/Axiom/AxiomDPI/MapRequest/MapRequestSearch.aspx">Mapping Request</A></DIV><DIV><A HREF="http://www.fuzeqna.com/careerbuilder/consumer/kbdetail_qaonly.asp?kbid=2247">Request Integration (Europe)</A></DIV></DIV><DIV CLASS="clsMenu" ID="divMenuCustomerSupport"><DIV CLASS="clsMenuSpacer"><b /></DIV><DIV><A HREF="http://ccwr/">GPS Fulfillment Request</A></DIV><DIV><A HREF="http://cbuniverse.cb.careerbuilder.com/apps/ContactUs/SitePages/Site%20Issues.aspx">Technical Escalation</A></DIV><DIV><A HREF="http://cagility.com/Default.aspx">Suggestions</A></DIV><DIV><A HREF="http://cbuniverse.cb.careerbuilder.com/apps/finance/SitePages/CBSRequest.aspx">Finance Requests (CBS Request Form)</A></DIV><DIV><A HREF="/Axiom/Account/Company/CompanySearch.aspx">Company Profile Search</A></DIV></DIV><DIV CLASS="clsMenu" ID="divMenuUtility"><DIV CLASS="clsMenuSpacer"><b /></DIV><DIV><A HREF="/Axiom/Utilities/ResumeDatabase.aspx">CB Demo Account</A></DIV><DIV><A HREF="/Axiom/Utilities/CustomerService/FeaturedEmployer/FeaturedEmployerSearch.aspx">Manage Featured Employers</A></DIV><DIV><A HREF="/Axiom/Product/ProductSearch.aspx?Value=Search">Product Search</A></DIV><DIV><A HREF="/Axiom/Utilities/Technology/ZipCodeSearch.aspx">Zip Code Search</A></DIV><DIV><A HREF="/Axiom/Financial/Utilities/Technology/Employee/EmployeeSearch.aspx">Employee Search</A></DIV><DIV><A HREF="/Axiom/Utilities/Marketing/Coupon/CouponSearch.aspx">Coupon Search</A></DIV><DIV><A HREF="/Axiom/Financial/Utilities/Technology/CostCenter/CostCenterSearch.aspx">Cost Center Search</A></DIV><DIV><A HREF="https://axiomcloud.careerbuilder.com/permissions">Security Tag Search</A></DIV><DIV><A HREF="/Axiom/Utilities/CustomerService/SharedAccountsSearch.aspx">Shared Accounts</A></DIV><DIV><A HREF="/Axiom/Utilities/Technology/QPDefs/QueueCreator.aspx">Queue Creator</A></DIV><DIV><A HREF="/Axiom/Utilities/Technology/QPDefs/QPDefsEditorPage.aspx">QP Definition Editor</A></DIV><DIV><A HREF="/Axiom/Utilities/Technology/QPDefs/QDefsEditorPage.aspx">Queue Definition Editor</A></DIV><DIV><A HREF="/Axiom/Utilities/Technology/BPDefs/BPDefsEditor.aspx">Batch Process Editor</A></DIV><DIV><A HREF="/Axiom/Utilities/Technology/Tally/TallyFormV2.aspx">The Source Stat System V2</A></DIV><DIV><A HREF="/Axiom/Utilities/Technology/PlatformStats/StatsQuery.aspx">Platform Stats Query</A></DIV><DIV><A HREF="http://www.careerbuilder.com/nlutils/dduv4qmonitor.aspx?type=prod">DDU Queue Monitor</A></DIV><DIV><A HREF="http://www.careerbuilder.com/nlutils/SVMonitor.aspx">SV Monitor</A></DIV><DIV><A HREF="http://www.careerbuilder.com/nlutils/SVDIDFinder.aspx">SV DID Finder</A></DIV><DIV><A HREF="/Axiom/Utilities/JobChecker.aspx">Active Job Monitor</A></DIV><DIV><A HREF="/Axiom/Utilities/Redirects.aspx">Manage Redirects</A></DIV><DIV><A HREF="/Axiom/User/Email/AXArchiveEmailMgr2.aspx">Sent Email Tracking</A></DIV><DIV><A HREF="/Axiom/CoBrand/CBSearch.aspx">CoBrand Search</A></DIV><DIV><A HREF="/Axiom/CareerTransitions/CTNew.aspx">Career Transitions</A></DIV><DIV><A HREF="/Axiom/ShortURL/CreateShortURL.aspx">Create Short URL</A></DIV><DIV><A HREF="/Axiom/User/Email/UnsubscribeAllEmails.aspx">Unsubscribe All Emails</A></DIV><DIV><A HREF="/Axiom/Concierge/LeadPartnerForm.aspx">CB Concierge</A></DIV><DIV><A HREF="/Axiom/User/Email/EmailBounce.aspx">Email Bounces</A></DIV></DIV><DIV CLASS="clsMenu" ID="divMenuUtility"><DIV CLASS="clsMenuSpacer"><b /></DIV><DIV><A HREF="/Axiom/Utilities/JobChecker.aspx">Active Job Monitor</A></DIV><DIV><A HREF="/Axiom/Utilities/Technology/BPDefs/BPDefsEditor.aspx">Batch Process Editor</A></DIV><DIV><A HREF="/Axiom/CareerTransitions/CTNew.aspx">Career Transitions</A></DIV><DIV><A HREF="/Axiom/Concierge/LeadPartnerForm.aspx">CB Concierge</A></DIV><DIV><A HREF="/Axiom/Utilities/ResumeDatabase.aspx">CB Demo Account</A></DIV><DIV><A HREF="/Axiom/CoBrand/CBSearch.aspx">CoBrand Search</A></DIV><DIV><A HREF="/Axiom/Financial/Utilities/Technology/CostCenter/CostCenterSearch.aspx">Cost Center Search</A></DIV><DIV><A HREF="/Axiom/Utilities/Marketing/Coupon/CouponSearch.aspx">Coupon Search</A></DIV><DIV><A HREF="/Axiom/ShortURL/CreateShortURL.aspx">Create Short URL</A></DIV><DIV><A HREF="http://www.careerbuilder.com/nlutils/dduv4qmonitor.aspx?type=prod">DDU Queue Monitor</A></DIV><DIV><A HREF="/Axiom/User/Email/EmailBounce.aspx">Email Bounces</A></DIV><DIV><A HREF="/Axiom/Financial/Utilities/Technology/Employee/EmployeeSearch.aspx">Employee Search</A></DIV><DIV><A HREF="/Axiom/Utilities/CustomerService/FeaturedEmployer/FeaturedEmployerSearch.aspx">Manage Featured Employers</A></DIV><DIV><A HREF="/Axiom/Utilities/Redirects.aspx">Manage Redirects</A></DIV><DIV><A HREF="/Axiom/Utilities/Technology/PlatformStats/StatsQuery.aspx">Platform Stats Query</A></DIV><DIV><A HREF="/Axiom/Product/ProductSearch.aspx?Value=Search">Product Search</A></DIV><DIV><A HREF="/Axiom/Utilities/Technology/QPDefs/QPDefsEditorPage.aspx">QP Definition Editor</A></DIV><DIV><A HREF="/Axiom/Utilities/Technology/QPDefs/QueueCreator.aspx">Queue Creator</A></DIV><DIV><A HREF="/Axiom/Utilities/Technology/QPDefs/QDefsEditorPage.aspx">Queue Definition Editor</A></DIV><DIV><A HREF="https://axiomcloud.careerbuilder.com/permissions">Security Tag Search</A></DIV><DIV><A HREF="/Axiom/User/Email/AXArchiveEmailMgr2.aspx">Sent Email Tracking</A></DIV><DIV><A HREF="/Axiom/Utilities/CustomerService/SharedAccountsSearch.aspx">Shared Accounts</A></DIV><DIV><A HREF="http://www.careerbuilder.com/nlutils/SVDIDFinder.aspx">SV DID Finder</A></DIV><DIV><A HREF="http://www.careerbuilder.com/nlutils/SVMonitor.aspx">SV Monitor</A></DIV><DIV><A HREF="/Axiom/Utilities/Technology/Tally/TallyFormV2.aspx">The Source Stat System V2</A></DIV><DIV><A HREF="/Axiom/User/Email/UnsubscribeAllEmails.aspx">Unsubscribe All Emails</A></DIV><DIV><A HREF="/Axiom/Utilities/Technology/ZipCodeSearch.aspx">Zip Code Search</A></DIV></DIV>
+    
+    <table cellspacing="0" cellpadding="0" width="100%" border="0">
+        <tr>
+            <td>
+                <span class="cb_style">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+	<HEAD>
+		<title>MxAccountView</title>
+		<meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">
+		<meta content="Visual Basic .NET 7.1" name="CODE_LANGUAGE">
+		<meta content="JavaScript" name="vs_defaultClientScript">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+	</HEAD>
+	<body MS_POSITIONING="GridLayout">
+		<table cellPadding="0" align="center" border="0">
+			<tr>
+				<td vAlign="top" align="center"><span id="Content"><form id="TheForm1" Method="Post" Name="TheForm1" style="margin:0px;">
+	<table cellspacing="0" cellpadding="0" border="0" style="background-color:White;border-width:0pt;border-style:None;width:100%;border-collapse:collapse;">
+		<tr>
+			<td><table cellspacing="0" cellpadding="0" bordercolor="Black" border="0" style="background-color:White;border-color:Black;border-width:0px;border-style:None;width:100%;border-collapse:collapse;">
+				<tr>
+					<td><table cellspacing="0" cellpadding="0" border="0" style="background-color:White;border-width:0pt;border-style:None;font-family:MS Sans Serif;width:100%;border-collapse:collapse;">
+						<tr style="background-color:Silver;">
+							<td valign="top" style="background-color:White;"><table cellspacing="0" cellpadding="0" border="0" style="background-color:White;border-width:0pt;border-style:None;width:100%;border-collapse:collapse;">
+								<tr>
+									<td><table cellspacing="0" cellpadding="0" bordercolor="Black" border="0" style="background-color:White;border-color:Black;border-width:0px;border-style:None;width:100%;border-collapse:collapse;">
+										<tr>
+											<td><table cellspacing="0" cellpadding="0" border="0" style="background-color:White;border-width:0pt;border-style:None;font-family:MS Sans Serif;width:100%;border-collapse:collapse;">
+												<tr style="background-color:Navy;">
+
+												</tr><tr style="background-color:White;">
+													<td align="center" style="width:100%;font:normal bold 18pt arial,helvetica;color:#FF8C00;">View Account Information</td>
+												</tr>
+											</table></td>
+										</tr>
+									</table></td>
+								</tr>
+							</table></td>
+						</tr><tr style="background-color:Gray;">
+							<td valign="top" style="background-color:White;"><table cellspacing="0" cellpadding="0" border="0" style="background-color:White;border-width:0pt;border-style:None;border-collapse:collapse;">
+								<tr>
+									<td><table cellspacing="0" cellpadding="0" bordercolor="Black" border="0" style="border-color:Black;border-width:0px;border-style:None;width:100%;border-collapse:collapse;">
+										<tr>
+											<td><table cellspacing="0" cellpadding="0" border="0" style="background-color:White;border-width:0pt;border-style:None;font-family:MS Sans Serif;width:100%;border-collapse:collapse;">
+												<tr style="background-color:Navy;">
+
+												</tr><tr style="background-color:Silver;">
+													<td align="right" valign="top" style="background-color:White;"><table cellspacing="0" cellpadding="0" border="0" style="border-style:None;width:100%;border-collapse:collapse;">
+														<tr>
+															<td><table cellspacing="0" cellpadding="0" bordercolor="Black" border="0" style="border-color:Black;border-width:0px;border-style:None;width:100%;border-collapse:collapse;">
+																<tr>
+																	<td><table cellspacing="0" cellpadding="1" border="0" style="border-style:None;font-family:arial,helvetica;font-size:9pt;width:100%;border-collapse:collapse;">
+																		<tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;">&nbsp;</td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;">&nbsp;</td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td align="left" style="color:#000066;border-color:Orange;border-width:1pt;border-style:Solid;font-family:verdana;font-size:9pt;font-weight:bold;padding-right:4px;">Account Edit</td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td nowrap="nowrap" align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"><a title="Edit Account Information" onclick="" onmouseover="this.style.color=&#39;orange&#39;" onmouseout="this.style.color=&#39;navy&#39;" href="http://boss/Axiom/Account/AccountEdit.aspx?Acct_DID=A810WS76Q41TXKS2B1W" style="width:100%;TEXT-DECORATION:none;COLOR:navy;">Edit Account Information</a></td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td nowrap="nowrap" align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"><a title="Edit Default Billing Information" onclick="" onmouseover="this.style.color=&#39;orange&#39;" onmouseout="this.style.color=&#39;navy&#39;" href="http://boss/Axiom/Account/AccountEditBillInfo.aspx?Acct_DID=A810WS76Q41TXKS2B1W" style="width:100%;TEXT-DECORATION:none;COLOR:navy;">Edit Default <br> Billing Information</a></td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td nowrap="nowrap" align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"><a title="Become JobPoster" onclick="/Axiom" onmouseover="this.style.color=&#39;orange&#39;" onmouseout="this.style.color=&#39;navy&#39;" href="http://boss/Axiom/User/BecomeUser.aspx?HHTVUser_DID=UHP3736RVZDQ3R5HNXK" style="width:100%;TEXT-DECORATION:none;COLOR:navy;">QuickBecome</a></td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td nowrap="nowrap" align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"><a title="Manager Users as a Manager" onclick="" onmouseover="this.style.color=&#39;orange&#39;" onmouseout="this.style.color=&#39;navy&#39;" href="http://boss/Axiom/User/BecomeUser.aspx?Acct_DID=A810WS76Q41TXKS2B1W&amp;Type=ACCT&amp;DestURL=%2f%2fJobPoster%2fAccounts%2fAccountUsers.aspx%3fAcct_DID%3dA810WS76Q41TXKS2B1W" style="width:100%;TEXT-DECORATION:none;COLOR:navy;">Manage Users</a></td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td nowrap="nowrap" align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"><a title="Manager Company Profiles as a Manager" onclick="" onmouseover="this.style.color=&#39;orange&#39;" onmouseout="this.style.color=&#39;navy&#39;" href="http://boss/Axiom/User/BecomeUser.aspx?Acct_DID=A810WS76Q41TXKS2B1W&amp;Type=ACCT&amp;DestURL=%2f%2fJobPoster%2fCompanies%2f" style="width:100%;TEXT-DECORATION:none;COLOR:navy;">Manage Company Profiles</a></td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td nowrap="nowrap" align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"><a title="Add Users to Account" onclick="" onmouseover="this.style.color=&#39;orange&#39;" onmouseout="this.style.color=&#39;navy&#39;" href="http://boss/Axiom/Account/AddUsers.aspx?AccountDID=A810WS76Q41TXKS2B1W" style="width:100%;TEXT-DECORATION:none;COLOR:navy;">Add Users</a></td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td nowrap="nowrap" align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"><a title="Add Account Journal" onclick="" onmouseover="this.style.color=&#39;orange&#39;" onmouseout="this.style.color=&#39;navy&#39;" href="http://boss/Axiom/Account/AccountJournalAdd.aspx?CustCompName=American Intercontinental University&amp;AcctJrnl_TargetDID=A810WS76Q41TXKS2B1W" style="width:100%;TEXT-DECORATION:none;COLOR:navy;">Add Account Journal</a></td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td nowrap="nowrap" align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"><a title="Data Store Options" onclick="" onmouseover="this.style.color=&#39;orange&#39;" onmouseout="this.style.color=&#39;navy&#39;" href="http://boss/Axiom/Account/DataStoreOptions.aspx?Acct_DID=A810WS76Q41TXKS2B1W" style="width:100%;TEXT-DECORATION:none;COLOR:navy;">Data Store Options</a></td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td nowrap="nowrap" align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"><a title="Enable NoFrames Option" onclick="" onmouseover="this.style.color=&#39;orange&#39;" onmouseout="this.style.color=&#39;navy&#39;" href="http://boss/Axiom/Account/AccountNoFrames.aspx?Acct_DID=A810WS76Q41TXKS2B1W&amp;Mode=Enable" style="width:100%;TEXT-DECORATION:none;COLOR:navy;">Enable NoFrames Option</a></td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td nowrap="nowrap" align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"><a title="Add Customer Feedback" onclick="" onmouseover="this.style.color=&#39;orange&#39;" onmouseout="this.style.color=&#39;navy&#39;" href="http://cagility.com/Default.aspx" style="width:100%;TEXT-DECORATION:none;COLOR:navy;">Add Customer Feedback</a></td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td nowrap="nowrap" align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"><a title="Make this an sso account" onclick="" onmouseover="this.style.color=&#39;orange&#39;" onmouseout="this.style.color=&#39;navy&#39;" href="http://boss/Axiom/Utilities/SetupAccountSSO.aspx?AccountDID=A810WS76Q41TXKS2B1W" style="width:100%;TEXT-DECORATION:none;COLOR:navy;">Setup Account SSO</a></td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td nowrap="nowrap" align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"><a title="Edit AccountAttributes" onclick=";window.open(this.href, &#39;&#39;, &#39;status=yes,height=500,width=700,scrollbars=yes,resizable=yes&#39;);event.returnValue = false; return false;" onmouseover="this.style.color=&#39;orange&#39;" onmouseout="this.style.color=&#39;navy&#39;" target="_blank" href="https://axiomcloud.careerbuilder.com/accounts/AT-9900733614/attributes" style="width:100%;TEXT-DECORATION:none;COLOR:navy;">Edit AccountAttributes</a></td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td align="left" style="color:#000066;border-color:Orange;border-width:1pt;border-style:Solid;font-family:verdana;font-size:9pt;font-weight:bold;padding-right:4px;">Account Details</td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td nowrap="nowrap" align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"><a title="View SalesForce Company" onclick="window.open(&#39;https://cb.my.salesforce.com/001a000001So4HEAAZ&#39;,&#39;wndUpdate&#39;); return false;" onmouseover="this.style.color=&#39;orange&#39;" onmouseout="this.style.color=&#39;navy&#39;" href="https://cb.my.salesforce.com/001a000001So4HEAAZ" style="width:100%;TEXT-DECORATION:none;COLOR:navy;">View SalesForce Company</a></td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td nowrap="nowrap" align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"><a title="View Company Profiles" onclick="" onmouseover="this.style.color=&#39;orange&#39;" onmouseout="this.style.color=&#39;navy&#39;" href="http://boss/Axiom/Account/Company/CompanySearch.aspx?Comp_AccountDID=A810WS76Q41TXKS2B1W" style="width:100%;TEXT-DECORATION:none;COLOR:navy;">View Company Profiles</a></td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td nowrap="nowrap" align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"><a title="View JobSkins" onclick="" onmouseover="this.style.color=&#39;orange&#39;" onmouseout="this.style.color=&#39;navy&#39;" href="http://boss/Axiom/Account/Company/JobThemeSearch.aspx?Acct_DID=A810WS76Q41TXKS2B1W" style="width:100%;TEXT-DECORATION:none;COLOR:navy;">View JobSkins</a></td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td nowrap="nowrap" align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"><a title="View Account Events" onclick="" onmouseover="this.style.color=&#39;orange&#39;" onmouseout="this.style.color=&#39;navy&#39;" href="http://boss.careerbuilder.com/Axiom/Utilities/ShowEventsV2.aspx?target=A810WS76Q41TXKS2B1W&amp;Event=&amp;DIDTYPE=target&amp;Y1=2016&amp;Y2=2016&amp;Mo1=05&amp;Mo2=05&amp;Day1=01&amp;Day2=31" style="width:100%;TEXT-DECORATION:none;COLOR:navy;">View Account Events</a></td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td nowrap="nowrap" align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"><a title="View BJB Headers" onclick="" onmouseover="this.style.color=&#39;orange&#39;" onmouseout="this.style.color=&#39;navy&#39;" href="http://boss/Axiom/Account/Company/BasicJobBrandingHeaderSearch.aspx?Acct_DID=A810WS76Q41TXKS2B1W" style="width:100%;TEXT-DECORATION:none;COLOR:navy;">View BJB Headers</a></td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td nowrap="nowrap" align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"><a title="View Account Events" onclick="" onmouseover="this.style.color=&#39;orange&#39;" onmouseout="this.style.color=&#39;navy&#39;" href="http://boss.careerbuilder.com/Axiom/Utilities/ShowEventsV2.aspx?target=A810WS76Q41TXKS2B1W&amp;Event=&amp;DIDTYPE=target&amp;Y1=2016&amp;Y2=2016&amp;Mo1=05&amp;Mo2=05&amp;Day1=01&amp;Day2=31" style="width:100%;TEXT-DECORATION:none;COLOR:navy;">View Account Events</a></td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td nowrap="nowrap" align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"><a title="View Mapping Request of an Account" onclick="" onmouseover="this.style.color=&#39;orange&#39;" onmouseout="this.style.color=&#39;navy&#39;" href="http://boss.careerbuilder.com/Axiom/AxiomDPI/MapRequest/MapRequestSearch.aspx?MapRequest_AccountDID=A810WS76Q41TXKS2B1W" style="width:100%;TEXT-DECORATION:none;COLOR:navy;">View Mapping Request</a></td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td nowrap="nowrap" align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"><a title="GPS Branding Request" onclick=";window.open(this.href, &#39;&#39;, &#39;status=yes,height=500,width=700,scrollbars=yes,resizable=yes&#39;);event.returnValue = false; return false;" onmouseover="this.style.color=&#39;orange&#39;" onmouseout="this.style.color=&#39;navy&#39;" target="_blank" href="http://cbuniverse.cb.careerbuilder.com/apps/ccapps/Customer_Care_Request_Forms/BrandingDID.aspx?AccountDID=A810WS76Q41TXKS2B1W" style="width:100%;TEXT-DECORATION:none;COLOR:navy;">GPS Branding Request</a></td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td nowrap="nowrap" align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"><a title="GPS Job Posting Request" onclick=";window.open(this.href, &#39;&#39;, &#39;status=yes,height=500,width=700,scrollbars=yes,resizable=yes&#39;);event.returnValue = false; return false;" onmouseover="this.style.color=&#39;orange&#39;" onmouseout="this.style.color=&#39;navy&#39;" target="_blank" href="http://cbuniverse.cb.careerbuilder.com/apps/ccapps/Customer_Care_Request_Forms/JobPostingDID.aspx?AccountDID=A810WS76Q41TXKS2B1W" style="width:100%;TEXT-DECORATION:none;COLOR:navy;">GPS Job Posting Request</a></td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td nowrap="nowrap" align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"><a title="GPS Job Posting Personified Request" onclick=";window.open(this.href, &#39;&#39;, &#39;status=yes,height=500,width=700,scrollbars=yes,resizable=yes&#39;);event.returnValue = false; return false;" onmouseover="this.style.color=&#39;orange&#39;" onmouseout="this.style.color=&#39;navy&#39;" target="_blank" href="http://cbuniverse.cb.careerbuilder.com/apps/ccapps/Customer_Care_Request_Forms/JobPostingPersonifiedDID.aspx?AccountDID=A810WS76Q41TXKS2B1W" style="width:100%;TEXT-DECORATION:none;COLOR:navy;">GPS Job Posting Personified Request</a></td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td nowrap="nowrap" align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"><a title="GPS Other Request" onclick=";window.open(this.href, &#39;&#39;, &#39;status=yes,height=500,width=700,scrollbars=yes,resizable=yes&#39;);event.returnValue = false; return false;" onmouseover="this.style.color=&#39;orange&#39;" onmouseout="this.style.color=&#39;navy&#39;" target="_blank" href="http://cbuniverse.cb.careerbuilder.com/apps/ccapps/Customer_Care_Request_Forms/OtherDID.aspx?AccountDID=A810WS76Q41TXKS2B1W" style="width:100%;TEXT-DECORATION:none;COLOR:navy;">GPS Other Request</a></td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td nowrap="nowrap" align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"><a title="Technical Escalation" onclick=";window.open(this.href, &#39;&#39;, &#39;status=yes,height=500,width=700,scrollbars=yes,resizable=yes&#39;);event.returnValue = false; return false;" onmouseover="this.style.color=&#39;orange&#39;" onmouseout="this.style.color=&#39;navy&#39;" target="_blank" href="http://cbuniverse.cb.careerbuilder.com/apps/ContactUs/SitePages/SiteIssueAccDID.aspx?AccountDID=A810WS76Q41TXKS2B1W" style="width:100%;TEXT-DECORATION:none;COLOR:navy;">Technical Escalation</a></td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td nowrap="nowrap" align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"><a title="View Image of Physical Contract" onclick="" onmouseover="this.style.color=&#39;orange&#39;" onmouseout="this.style.color=&#39;navy&#39;" href="http://boss/Axiom/Order/ViewContractImages.aspx?Acct_DID=A810WS76Q41TXKS2B1W" style="width:100%;TEXT-DECORATION:none;COLOR:navy;">View Contract Images</a></td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td nowrap="nowrap" align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"><a title="View Orders" onclick="" onmouseover="this.style.color=&#39;orange&#39;" onmouseout="this.style.color=&#39;navy&#39;" href="http://boss/Axiom/Order/OrderSearch.aspx?AgreementSearch_AccountDID=A810WS76Q41TXKS2B1W" style="width:100%;TEXT-DECORATION:none;COLOR:navy;">View Orders</a></td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td nowrap="nowrap" align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"><a title="View Jobs" onclick="" onmouseover="this.style.color=&#39;orange&#39;" onmouseout="this.style.color=&#39;navy&#39;" href="http://boss/Axiom/Job/JobSearch.aspx?Acct_DID=A810WS76Q41TXKS2B1W" style="width:100%;TEXT-DECORATION:none;COLOR:navy;">View Jobs</a></td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td nowrap="nowrap" align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"><a title="Importance Level computed by DW" onclick=";window.open(this.href, &#39;&#39;, &#39;status=yes,height=500,width=700,scrollbars=yes,resizable=yes&#39;);event.returnValue = false; return false;" onmouseover="this.style.color=&#39;orange&#39;" onmouseout="this.style.color=&#39;navy&#39;" target="_blank" href="http://birs/Reportserver?%2fCustomerCare%2fAccountILevelReport&amp;rs:Command=Render&amp;AccountDID=A810WS76Q41TXKS2B1W" style="width:100%;TEXT-DECORATION:none;COLOR:navy;">DW Computed Importance</a></td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td nowrap="nowrap" align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"><a title="View the Statement of Account report for date range" onclick=";window.open(this.href, &#39;&#39;, &#39;status=yes,height=500,width=700,scrollbars=yes,resizable=yes&#39;);event.returnValue = false; return false;" onmouseover="this.style.color=&#39;orange&#39;" onmouseout="this.style.color=&#39;navy&#39;" target="_blank" href="http://dwrs/ReportServer/Pages/ReportViewer.aspx?%2fBI Financial%2fSecurity Level 2%2fStatement Of Account&amp;rs:Command=Render&amp;AccountDID=A810WS76Q41TXKS2B1W" style="width:100%;TEXT-DECORATION:none;COLOR:navy;">Statement of Account</a></td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td nowrap="nowrap" align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"><a title="View Journal Mashup" onclick=";window.open(this.href, &#39;&#39;, &#39;status=yes,height=500,width=700,scrollbars=yes,resizable=yes&#39;);event.returnValue = false; return false;" onmouseover="this.style.color=&#39;orange&#39;" onmouseout="this.style.color=&#39;navy&#39;" target="_blank" href="http://svr-pr-crm1.cb.careerbuilder.com/CRMTools/Pivotal/ActivitiesAndNotesMashup.aspx?CB_AccountDID=A810WS76Q41TXKS2B1W" style="width:100%;TEXT-DECORATION:none;COLOR:navy;">View Journal Mashup</a></td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td nowrap="nowrap" align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"><a title="View Electronic Payment Transactions" onclick="" onmouseover="this.style.color=&#39;orange&#39;" onmouseout="this.style.color=&#39;navy&#39;" href="http://boss/Axiom/AR/CCTransSearch.aspx?AccountDID=A810WS76Q41TXKS2B1W" style="width:100%;TEXT-DECORATION:none;COLOR:navy;">View Electronic Payment Trans</a></td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td nowrap="nowrap" align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"><a title="View Locked RDB Licenses" onclick="" onmouseover="this.style.color=&#39;orange&#39;" onmouseout="this.style.color=&#39;navy&#39;" href="http://boss/Axiom/Account/ActiveLicensesList.aspx?AccountDID=A810WS76Q41TXKS2B1W" style="width:100%;TEXT-DECORATION:none;COLOR:navy;">View Locked RDB Licenses</a></td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td nowrap="nowrap" align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"><a title="View Integration Files" onclick="" onmouseover="this.style.color=&#39;orange&#39;" onmouseout="this.style.color=&#39;navy&#39;" href="http://boss.careerbuilder.com/Axiom/AxiomDPI/ClientIntegration/ViewIntegrationFiles.aspx?AccountDID=A810WS76Q41TXKS2B1W&amp;AccountName=American Intercontinental University" style="width:100%;TEXT-DECORATION:none;COLOR:navy;">View Integration Files</a></td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td align="left" style="color:#000066;border-color:Orange;border-width:1pt;border-style:Solid;font-family:verdana;font-size:9pt;font-weight:bold;padding-right:4px;">AR Search</td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td nowrap="nowrap" align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"><a title="Payment/Invoice History" onclick="" onmouseover="this.style.color=&#39;orange&#39;" onmouseout="this.style.color=&#39;navy&#39;" href="http://boss/Axiom/Financial/AR/ARSearch.aspx?Acct_DID=A810WS76Q41TXKS2B1W" style="width:100%;TEXT-DECORATION:none;COLOR:navy;">AR Search</a></td>
+																		</tr><tr>
+
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td nowrap="nowrap" align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"><a title="Request for a creditmemo at Account level" onclick="" onmouseover="this.style.color=&#39;orange&#39;" onmouseout="this.style.color=&#39;navy&#39;" href="http://boss/Axiom/Financial/Invoice/Credit/CreditRequest.aspx?Account_DID=A810WS76Q41TXKS2B1W" style="width:100%;TEXT-DECORATION:none;COLOR:navy;">Add Creditmemo Request</a></td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td align="left" style="color:#000066;border-color:Orange;border-width:1pt;border-style:Solid;font-family:verdana;font-size:9pt;font-weight:bold;padding-right:4px;">Call Tracker</td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td nowrap="nowrap" align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"><a title="Load Call Tracker with specific account" onclick="window.open(this.href, &#39;popup&#39;, &#39;width=900,height=700,scrollbars=1,resizable=1&#39;); return false;" onmouseover="this.style.color=&#39;orange&#39;" onmouseout="this.style.color=&#39;navy&#39;" href="http://boss/Axiom/CallTrack/CallTrackerV2.aspx?axiomtemplate=false&amp;flyout=false&amp;Acct_DID=A810WS76Q41TXKS2B1W" style="width:100%;TEXT-DECORATION:none;COLOR:navy;">Track Interaction</a></td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td align="left" style="color:#000066;border-color:Orange;border-width:1pt;border-style:Solid;font-family:verdana;font-size:9pt;font-weight:bold;padding-right:4px;">Print Options</td>
+																		</tr><tr>
+																			<td align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"></td><td nowrap="nowrap" align="left" style="border-style:None;font-family:verdana;font-size:9pt;padding-left:20px;padding-right:4px;"><a title="Print All Open Invoices" onclick="" onmouseover="this.style.color=&#39;orange&#39;" onmouseout="this.style.color=&#39;navy&#39;" href="http://boss/Axiom/Financial/Report/Financial/InvoicePrintV2.aspx?ReportType=MultipleInvoices&amp;Report_NO=A810WS76Q41TXKS2B1W&amp;CompanyCode=550" style="width:100%;TEXT-DECORATION:none;COLOR:navy;">Print All Open Invoices</a></td>
+																		</tr>
+																	</table></td>
+																</tr>
+															</table></td>
+														</tr>
+													</table></td><td align="right" valign="top" style="background-color:White;"><table cellspacing="0" cellpadding="0" border="0" style="background-color:White;border-style:None;width:700px;border-collapse:collapse;">
+														<tr>
+															<td><table cellspacing="0" cellpadding="0" border="0" style="width:100%;border-collapse:collapse;">
+																<tr>
+																	<td valign="bottom"><table cellspacing="0" cellpadding="5" border="0" style="border-collapse:collapse;">
+																		<tr>
+																			<td nowrap="nowrap" style="color:#FFFFFF;background-color:#FF8C00;font-family:arial,helvetica;font-size:12pt;font-weight:bold;padding:3px;">Details</td><td nowrap="nowrap" style="width:10px;"></td><td nowrap="nowrap" style="background-color:Silver;padding:3px;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#999999;"><a href="http://boss/Axiom/Account/AccountUserView.aspx?Acct_DID=A810WS76Q41TXKS2B1W">Users</a></td><td nowrap="nowrap" style="width:10px;"></td><td nowrap="nowrap" style="background-color:Silver;padding:3px;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#999999;"><a href="http://boss/Axiom/Account/AccountProductView.aspx?Acct_DID=A810WS76Q41TXKS2B1W">Products</a></td><td nowrap="nowrap" style="width:10px;"></td><td nowrap="nowrap" style="background-color:Silver;padding:3px;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#999999;"><a href="http://boss/Axiom/Account/AccountJournalView.aspx?JournalType=NotSystem&amp;AcctJrnl_TargetDID=A810WS76Q41TXKS2B1W">Journal</a></td><td nowrap="nowrap" style="width:10px;"></td><td nowrap="nowrap" style="background-color:Silver;padding:3px;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#999999;"><a href="http://boss/Axiom/Account/AccountJournalView.aspx?JournalType=System&amp;AcctJrnl_TargetDID=A810WS76Q41TXKS2B1W">SystemJournal</a></td><td nowrap="nowrap" style="width:10px;"></td><td nowrap="nowrap" style="background-color:Silver;padding:3px;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#999999;"><a href="http://boss/Axiom/Account/AccountBadJobs.aspx?Acct_DID=A810WS76Q41TXKS2B1W">Reported Jobs</a></td><td nowrap="nowrap" style="width:10px;"></td><td nowrap="nowrap" style="background-color:Silver;padding:3px;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#999999;"><a href="http://boss/Axiom/Financial/AR/AccountAR.aspx?Acct_DID=A810WS76Q41TXKS2B1W">AR</a></td><td nowrap="nowrap" style="width:10px;"></td>
+																		</tr>
+																	</table></td><td align="right" valign="bottom" style="width:100%;">&#160;</td>
+																</tr>
+															</table></td>
+														</tr><tr>
+															<td><table cellspacing="0" cellpadding="0" bordercolor="Black" border="0" style="border-color:Black;border-width:0px;border-style:None;width:100%;border-collapse:collapse;">
+																<tr>
+																	<td><table cellspacing="3" cellpadding="3" bordercolor="#FF8C00" border="0" style="background-color:LightGrey;border-color:#FF8C00;border-width:2pt;border-style:Solid;font-family:arial,helvetica;font-size:9pt;width:100%;">
+																		<tr style="background-color:Navy;">
+
+																		</tr><tr>
+																			<td><table cellspacing="0" cellpadding="0" border="0" style="width:100%;border-collapse:collapse;">
+																				<tr>
+																					<td><table cellspacing="0" cellpadding="0" bordercolor="Black" border="0" style="border-color:Black;border-width:0px;border-style:None;width:100%;border-collapse:collapse;">
+																						<tr>
+																							<td><table cellspacing="0" cellpadding="2" bordercolor="#CCCCCC" border="0" style="color:Black;background-color:#F0F0F0;border-color:#CCCCCC;border-width:1px;border-style:None;font-family:arial,helvetica;font-size:9pt;width:100%;border-collapse:collapse;">
+																								<tr>
+																									<td align="center" colspan="4" style="color:White;background-color:#000080;font-size:9pt;font-weight:bold;padding-top:2px;padding-bottom:2px;">Account Detail</td>
+																								</tr><tr>
+																									<td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">Account Name</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">American Intercontinental University</td><td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">Importance Level</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">SILVER</td>
+																								</tr><tr>
+																									<td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">Account ID</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">AT-9900733614</td><td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">National Account</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">False</td>
+																								</tr><tr>
+																									<td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">Account Level</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">Basic Account</td><td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">Account Origin</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">CB Corporate</td>
+																								</tr><tr>
+																									<td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">Payment Term</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">Net 45</td><td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">Payment Method</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">Invoice</td>
+																								</tr><tr>
+																									<td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">EBPP Token</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">1TXKS2B1W</td><td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">Billing Cycle</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">Invoice Immediately</td>
+																								</tr><tr>
+																									<td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">Billing Type</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">Corporate</td><td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">Invoice Delivery Method</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">Send Via Email</td>
+																								</tr><tr>
+																									<td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">Company Name</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">American Intercontinental University</td><td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;"></td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;"></td>
+																								</tr><tr>
+																									<td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">Insertion Order</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;"></td><td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;"></td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;"></td>
+																								</tr><tr>
+																									<td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;"></td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;"></td><td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">Resume Email Format</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">HTML with Attachments</td>
+																								</tr><tr>
+																									<td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">Tax ID</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;"></td><td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">Account DID</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">A810WS76Q41TXKS2B1W</td>
+																								</tr><tr>
+																									<td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;"></td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;"></td><td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">CompanyCode</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">Careerbuilder</td>
+																								</tr><tr>
+																									<td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">Language</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">USEnglish</td><td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">DPI Early Installment</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">True</td>
+																								</tr><tr>
+																									<td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">AMOverrideFlg</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">False</td><td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">Currency</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">USD</td>
+																								</tr><tr>
+																									<td align="center" colspan="4" style="color:White;background-color:#000080;font-size:9pt;font-weight:bold;padding-top:2px;padding-bottom:2px;">Contact Details</td>
+																								</tr><tr>
+																									<td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">Contact Name</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">Tricia Sigler</td><td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">Contact Fax</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">847-586-6021</td>
+																								</tr><tr>
+																									<td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">Address</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">231 N. Martingale</td><td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">Contact Phone</td><td>
+<script src="../javascript/jquery/jquery-1.4.2.min.js" type="text/javascript"></script>
+
+<div id="ClickToDial_Contact_pnlClickToDial">
+																										
+
+<div>
+
+    <input name="ClickToDial_Contact:hdnCBExtension" type="hidden" id="ClickToDial_Contact_hdnCBExtension" value="00000" />
+    <input name="ClickToDial_Contact:hdnDestinationPhoneNumber" type="hidden" id="ClickToDial_Contact_hdnDestinationPhoneNumber" value="224-293-5687" />
+    <input name="ClickToDial_Contact:hdnTableName" type="hidden" id="ClickToDial_Contact_hdnTableName" value="Account" />
+    <input name="ClickToDial_Contact:hdnRecordID" type="hidden" id="ClickToDial_Contact_hdnRecordID" value="A810WS76Q41TXKS2B1W" />
+    
+    <table cellpadding="0" cellspacing="0">
+																											<tr>
+																												<td style="text-align: left;">
+                <span id="ClickToDial_Contact_lblPhoneNumber" style="font: 12px arial,helvetica; color: Black;">224-293-5687</span>
+            </td>
+																												<td style="padding-left:5px;">
+                <input type="image" name="ClickToDial_Contact:btnDial" id="ClickToDial_Contact_btnDial" title="Click To Dial" src="../Images/PhoneIcon.png" border="0" onclick="OnDialClick(&#39;ClickToDial_Contact_hdnCBExtension&#39;, 
+&#39;ClickToDial_Contact_hdnDestinationPhoneNumber&#39;, 
+&#39;ClickToDial_Contact_hdnTableName&#39;, 
+&#39;ClickToDial_Contact_hdnRecordID&#39;, &#39;ClickToDial_Contact_DialProgress&#39; );
+return false;
+;" language="javascript" style="height:18px;" />
+            </td>
+																												<td style="padding-left:5px;">
+                <div id="ClickToDial_Contact_DialProgress" style="display:none;">
+                    <img src="../Images/ajax-loader.gif" alt="Dial" title="Dial" height="14px" />
+                    <span style="font: 12px arial,helvetica; color: Black;">Dialing...</span>
+                </div>
+            </td>
+																											</tr>
+																										</table>
+																										
+
+</div>
+
+
+																									</div>
+</td>
+																								</tr><tr>
+																									<td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;"></td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">Schaumburg, IL 60173</td><td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">Contact Email</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;"><a href="mailto:tsigler@aiuonline.edu" style="color:#000099;">tsigler@aiuonline.edu</a></td>
+																								</tr><tr>
+																									<td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;"></td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;"></td><td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">Contact Country</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">United States</td>
+																								</tr><tr>
+																									<td align="center" colspan="4" style="color:White;background-color:#000080;font-size:9pt;font-weight:bold;padding-top:2px;padding-bottom:2px;">Billing Details</td>
+																								</tr><tr>
+																									<td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">Bill Name</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">Jeff Shoemaker</td><td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">Bill Company Name</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">Career Education Corporation</td>
+																								</tr><tr>
+																									<td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">Address</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">231 N. Martingale</td><td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">Bill Phone</td><td>
+<script src="../javascript/jquery/jquery-1.4.2.min.js" type="text/javascript"></script>
+
+<div id="ClickToDial_Bill_pnlClickToDial">
+																										
+
+<div>
+
+    <input name="ClickToDial_Bill:hdnCBExtension" type="hidden" id="ClickToDial_Bill_hdnCBExtension" value="00000" />
+    <input name="ClickToDial_Bill:hdnDestinationPhoneNumber" type="hidden" id="ClickToDial_Bill_hdnDestinationPhoneNumber" value="847-585-3807" />
+    <input name="ClickToDial_Bill:hdnTableName" type="hidden" id="ClickToDial_Bill_hdnTableName" value="Account" />
+    <input name="ClickToDial_Bill:hdnRecordID" type="hidden" id="ClickToDial_Bill_hdnRecordID" value="A810WS76Q41TXKS2B1W" />
+    
+    <table cellpadding="0" cellspacing="0">
+																											<tr>
+																												<td style="text-align: left;">
+                <span id="ClickToDial_Bill_lblPhoneNumber" style="font: 12px arial,helvetica; color: Black;">847-585-3807</span>
+            </td>
+																												<td style="padding-left:5px;">
+                <input type="image" name="ClickToDial_Bill:btnDial" id="ClickToDial_Bill_btnDial" title="Click To Dial" src="../Images/PhoneIcon.png" border="0" onclick="OnDialClick(&#39;ClickToDial_Bill_hdnCBExtension&#39;, 
+&#39;ClickToDial_Bill_hdnDestinationPhoneNumber&#39;, 
+&#39;ClickToDial_Bill_hdnTableName&#39;, 
+&#39;ClickToDial_Bill_hdnRecordID&#39;, &#39;ClickToDial_Bill_DialProgress&#39; );
+return false;
+;" language="javascript" style="height:18px;" />
+            </td>
+																												<td style="padding-left:5px;">
+                <div id="ClickToDial_Bill_DialProgress" style="display:none;">
+                    <img src="../Images/ajax-loader.gif" alt="Dial" title="Dial" height="14px" />
+                    <span style="font: 12px arial,helvetica; color: Black;">Dialing...</span>
+                </div>
+            </td>
+																											</tr>
+																										</table>
+																										
+
+</div>
+
+
+																									</div>
+</td>
+																								</tr><tr>
+																									<td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;"></td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">Schaumburg, IL 60173</td><td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">Bill Email</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;"><a href="mailto:jshoemaker@aiuonline.edu" style="color:#000099;">jshoemaker@aiuonline.edu</a></td>
+																								</tr><tr>
+																									<td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;"></td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;"></td><td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">Bill Country</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">United States</td>
+																								</tr><tr>
+																									<td align="center" colspan="4" style="color:White;background-color:#000080;font-size:9pt;font-weight:bold;padding-top:2px;padding-bottom:2px;">Accounts Payable Details</td>
+																								</tr><tr>
+																									<td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">AP Name</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;"></td><td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">AP Company Name</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;"></td>
+																								</tr><tr>
+																									<td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">Address</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;"></td><td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">AP Phone</td><td>
+<script src="../javascript/jquery/jquery-1.4.2.min.js" type="text/javascript"></script>
+
+<div id="ClickToDial_AP_pnlClickToDial">
+																										
+
+<div>
+
+    <input name="ClickToDial_AP:hdnCBExtension" type="hidden" id="ClickToDial_AP_hdnCBExtension" value="00000" />
+    <input name="ClickToDial_AP:hdnDestinationPhoneNumber" type="hidden" id="ClickToDial_AP_hdnDestinationPhoneNumber" />
+    <input name="ClickToDial_AP:hdnTableName" type="hidden" id="ClickToDial_AP_hdnTableName" value="Account" />
+    <input name="ClickToDial_AP:hdnRecordID" type="hidden" id="ClickToDial_AP_hdnRecordID" value="A810WS76Q41TXKS2B1W" />
+    
+    <table cellpadding="0" cellspacing="0">
+																											<tr>
+																												<td style="text-align: left;">
+                <span id="ClickToDial_AP_lblPhoneNumber" style="font: 12px arial,helvetica; color: Black;"></span>
+            </td>
+																												<td style="padding-left:5px;">
+                
+            </td>
+																												<td style="padding-left:5px;">
+                
+            </td>
+																											</tr>
+																										</table>
+																										
+
+</div>
+
+
+																									</div>
+</td>
+																								</tr><tr>
+																									<td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;"></td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">,  </td><td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">AP Email</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;"><a href="mailto:" style="color:#000099;"></a></td>
+																								</tr><tr>
+																									<td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;"></td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;"></td><td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">AP Country</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;"></td>
+																								</tr><tr>
+																									<td align="right" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">AP Notes</td><td align="left" colspan="3" style="color:Red;background-color:#F0F0F0;font-size:9pt;">*MSA on file* Approved Net 45 SJM 11/2/15</td>
+																								</tr><tr>
+																									<td align="center" colspan="5" style="color:White;background-color:#000080;font-size:9pt;font-weight:bold;padding-top:2px;padding-bottom:2px;">Account Roles</td>
+																								</tr><tr>
+																									<td align="left" colspan="5" style="color:Black;background-color:#F0F0F0;font-size:9pt;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%;border-collapse:collapse;">
+																										<tr>
+																											<td><table cellspacing="0" cellpadding="0" bordercolor="Black" border="0" style="border-color:Black;border-width:0px;border-style:None;width:100%;border-collapse:collapse;">
+																												<tr>
+																													<td><table cellspacing="0" cellpadding="2" bordercolor="#CCCCCC" border="0" style="color:Black;background-color:#F0F0F0;border-color:#CCCCCC;border-width:1px;border-style:None;font-family:arial,helvetica;font-size:9pt;width:100%;border-collapse:collapse;">
+																														<tr style="background-color:Navy;">
+																															<td align="left" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">Role Type</td><td align="left" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">Role Value</td><td align="left" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">CostCenter Name</td><td align="left" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;">CostCenter</td><td align="left" style="color:Black;background-color:#B8B8CC;font-size:9pt;font-weight:bold;"></td>
+																														</tr><tr>
+																															<td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">CBS Rep</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;"><a href="http://boss/Axiom/Financial/Utilities/Technology/Employee/EmployeeView.aspx?CBEmployee_HHRepID=CSSTeam1House">CBS Team1</a></td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">Finance</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">7103</td>
+																														</tr><tr>
+																															<td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">AR Rep</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;"><a href="http://boss/Axiom/Financial/Utilities/Technology/Employee/EmployeeView.aspx?CBEmployee_HHRepID=dwagner">Douglas Wagner</a></td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">Finance</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">7103</td>
+																														</tr><tr>
+																															<td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">SCS Rep</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;"><a href="http://boss/Axiom/Financial/Utilities/Technology/Employee/EmployeeView.aspx?CBEmployee_HHRepID=HouseClientSupport">Client Support</a></td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">Customer Success</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">6002</td>
+																														</tr><tr>
+																															<td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">Sales Rep</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;"><a href="http://boss/Axiom/Financial/Utilities/Technology/Employee/EmployeeView.aspx?CBEmployee_HHRepID=tgagliarducci">Tony Gagliarducci</a></td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">EDU Recruitment</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">2554</td>
+																														</tr><tr>
+																															<td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">Org Owner</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;"><a href="http://boss/Axiom/Financial/Utilities/Technology/Employee/EmployeeView.aspx?CBEmployee_HHRepID=">Tony Gagliarducci</a></td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">EDU Recruitment</td><td align="left" style="color:Black;background-color:#F0F0F0;font-size:9pt;">2554</td>
+																														</tr>
+																													</table></td>
+																												</tr>
+																											</table></td>
+																										</tr>
+																									</table></td>
+																								</tr>
+																							</table></td>
+																						</tr>
+																					</table></td>
+																				</tr>
+																			</table></td>
+																		</tr>
+																	</table></td>
+																</tr>
+															</table></td>
+														</tr>
+													</table></td>
+												</tr>
+											</table></td>
+										</tr>
+									</table></td>
+								</tr>
+							</table></td>
+						</tr>
+					</table></td>
+				</tr>
+			</table></td>
+		</tr>
+	</table>
+</form></span></td>
+			</tr>
+		</table>
+	</body>
+</HTML>
+</span>
+            </td>
+        </tr>
+    </table>
+    
+    <input type="hidden" name="hdnHHRepID" id="hdnHHRepID" value="prodriguez" />
+</body>
+</html>

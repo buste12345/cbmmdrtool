@@ -1,6 +1,6 @@
 var async = require('async'),
 	keystone = require('keystone');
-
+var fs = require('fs');
 var Mmdr = keystone.list('Mmdr');
 //var bodyParser = require('body-parser');
 
@@ -73,17 +73,25 @@ exports.bothome = function(req, res) {
  * Update mmdr MMDR
  */ 
 exports.updatemmdr = function(req, res) {
-			console.log(req.body);
-			console.log(req.params);
-			console.log(req.query);
-			
-			req.on('data', function(chunk) {
-      		console.log("Received body data:");
-      		console.log(chunk.toString());
-      		var obj = JSON.parse(chunk);
-      				Mmdr.model.findOneAndUpdate({_id:obj.did,state:'progress'},obj.body).exec(function(err, item) 
+	
+	/*fs.writeFile('jason.txt', req.body.accountm,  function(err) {
+					 if (err) {
+				    return console.error(err);
+					 }
+   				console.log("Data written successfully!");
+				 console.log("Let's read newly written data");
+				 
+   				fs.readFile('input.txt', function (err, data) {
+    			  if (err) {
+				         return console.error(err);
+					    }
+			      console.log("Asynchronous read: " + data.toString());
+				  });
+			});*/
+	
+      				Mmdr.model.findOneAndUpdate({_id:req.body.did,state:'progress'},req.body).exec(function(err, item) 
 					{
-				
+					
 						if(err)
 						{
 							console.log(err);
@@ -95,14 +103,6 @@ exports.updatemmdr = function(req, res) {
 						else
 							res.send("No item");
 			});
-    		});
-			
-
-			
-			
-
-   
-		
 
 	
 }

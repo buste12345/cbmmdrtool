@@ -4,6 +4,15 @@ require('dotenv').load();
 
 // Require keystone
 var keystone = require('keystone');
+var express = require('express'),
+app = express(),
+body = require('body-parser');
+
+app.use(body.json({limit: '50mb'}));
+
+keystone.app = app;
+
+
 
 // Initialise Keystone with your project's configuration.
 // See http://keystonejs.com/guide/config for available options

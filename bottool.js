@@ -148,33 +148,47 @@ var robotno="1";
         }*/
     
 	var signalrec = function(callback) {
+	    
 		setInterval(function(){
+        $.when(getDatacors("http://mmdrtoolsadv-buste12345.c9users.io:8080/api/mmdr/getlast?assign=true&robotname="+robotno)).done(function(mrfirst)
+		{
 		console.log("Pinging...");
-		var mrfirst = getDatacors("http://mmdrtoolsadv-buste12345.c9users.io:8080/api/mmdr/getlast?assign=true&robotname="+robotno);
+
 		if(!checks(mrfirst,"error"))
 		    {
 		        console.log("Ping success");
 			    callback((mrfirst.split('"mrdid":"')[1].split('"'))[0],(mrfirst.split('"did":"')[1].split('"'))[0]);
 		    }
+		});
 		},5000);
+		
 	};
 	
 	var processmr = function(mrdid,id){
 	   
-	var mappingdetails = getDatacors("http://boss.careerbuilder.com/Axiom/AxiomDPI/MapRequest/MapRequestView.aspx?CBMapRequest_DID="+mrdid);
-	var mappingjoournal = getDatacors("http://boss.careerbuilder.com/Axiom/AxiomDPI/MapRequest/MapRequestViewJournal.aspx?CBMapRequestJournal_TargetDID="+mrdid);
-	var accountm = getDatacors("http://boss/Axiom/Account/AccountView.aspx?Acct_DID="+(((mappingdetails.split("Acct_DID=")[1])).split('"')[0]));
-	var accountproduct = getDatacors("http://boss/Axiom/Account/AccountProductView.aspx?Acct_DID="+(((accountm.split("AccountProductView.aspx?Acct_DID="))[1]).split('"')[0]));
-	var tcsetup = getDatacors("http://mapping.careerbuilder.com/ThunderCat/UI/CrawlConfig.aspx?MapRequestDID="+mrdid);
-	var clientdefault = getDatacors("http://mapping.careerbuilder.com/Atlas/ClientDefaults.aspx?ReqStatus=Complete&MapRequestDID="+mrdid);
-	var fieldmapping = getDatacors("http://mapping.careerbuilder.com/Atlas/FieldMappings.aspx?ReqStatus=Complete&MapRequestDID="+mrdid);
-	var batch1 = getDatacors("http://dpi.careerbuilder.com/site/support/finddpiuser/BatchResultsV2.aspx?EmailType=Poster&FileType=Batch&Email=" + ((((clientdefault.split("CBPosterEmail</td>")[1]).split("</td>"))[0]).split("<td>"))[1]);
-	var batch2 = getDatacors("http://dpi.careerbuilder.com/site/support/finddpiuser/"+decoderr((batch1.split('mxdlBatchLog__ctl1_lnkViewBatch" href="')[1]).split('"')[0]));
+	var mappingdetails = "http://boss.careerbuilder.com/Axiom/AxiomDPI/MapRequest/MapRequestView.aspx?CBMapRequest_DID="+mrdid;
+	var mappingjoournal = "http://boss.careerbuilder.com/Axiom/AxiomDPI/MapRequest/MapRequestViewJournal.aspx?CBMapRequestJournal_TargetDID="+mrdid;
+	var tcsetup = "http://mapping.careerbuilder.com/ThunderCat/UI/CrawlConfig.aspx?MapRequestDID="+mrdid;
+	var clientdefault = "http://mapping.careerbuilder.com/Atlas/ClientDefaults.aspx?ReqStatus=Complete&MapRequestDID="+mrdid;
+	var fieldmapping = "http://mapping.careerbuilder.com/Atlas/FieldMappings.aspx?ReqStatus=Complete&MapRequestDID="+mrdid;
 	
-    sendPost('http://mmdrtoolsadv-buste12345.c9users.io:8080/api/mmdr/updatemmdr','did='+id+'&mappingdetails='+escape(mappingdetails)+'&journal='+escape(mappingjoournal)+'&accountm='+escape(accountm)+'&accountproduct='+escape(accountproduct)+'&tcsetup='+escape(tcsetup)+'&defaultt='+escape(clientdefault)+'&fieldmapping='+escape(fieldmapping)+'&batch='+escape(batch1)+'&&batch2='+escape(batch2)+'&state=completed');
-	console.log("MR DID: "+mrdid+" is now completed.");
-	};
+	$.when(getDatacors(mappingdetails),getDatacors(mappingjoournal),getDatacors(tcsetup),getDatacors(clientdefault),getDatacors(fieldmapping)).done(function(rmappingdetails,rmappingjoournal,rtcsetup,rclientdefault,rfieldmapping){
+	    var accountm = "http://boss/Axiom/Account/AccountView.aspx?Acct_DID="+(((rmappingdetails.split("Acct_DID=")[1])).split('"')[0]);
+        var batch1 = "http://dpi.careerbuilder.com/site/support/finddpiuser/BatchResultsV2.aspx?EmailType=Poster&FileType=Batch&Email=" + ((((rclientdefault.split("CBPosterEmail</td>")[1]).split("</td>"))[0]).split("<td>"))[1];
+        console.log("clup");
+	   
+	   $.when(getDatacors(accountm),getDatacors(batch1)).done(function(raccountm,rbatch1){
+	       	    var accountproduct = "http://boss/Axiom/Account/AccountProductView.aspx?Acct_DID="+(((raccountm.split("AccountProductView.aspx?Acct_DID="))[1]).split('"')[0]);
+                var batch2 = "http://dpi.careerbuilder.com/site/support/finddpiuser/"+decoderr((rbatch1.split('mxdlBatchLog__ctl1_lnkViewBatch" href="')[1]).split('"')[0]);
+                $.when(getDatacors(accountproduct),getDatacors(batch2)).done(function(raccountproduct,rbatch2){
+	                 sendPost('http://mmdrtoolsadv-buste12345.c9users.io:8080/api/mmdr/updatemmdr','did='+id+'&mappingdetails='+escape(rmappingdetails)+'&journal='+escape(rmappingjoournal)+'&accountm='+escape(raccountm)+'&accountproduct='+escape(raccountproduct)+'&tcsetup='+escape(rtcsetup)+'&defaultt='+escape(rclientdefault)+'&fieldmapping='+escape(rfieldmapping)+'&batch='+escape(rbatch1)+'&batch2='+escape(rbatch2)+'&state=completed');
+	               console.log("MR DID: "+mrdid+" is now completed.");
+	            });
+	   });
 
+
+	});
+};
     //ACTIVATE BOT FUNCTIONALITY
     signalrec(processmr);
 
@@ -220,14 +234,18 @@ function checks(value1, value2) {
 
 //Only use this function to crawl ThunderCat to avoid cross origin policy (CORS) 
 function getDatacors(customlink) {
+    var tot = jQuery.Deferred();
     console.log("Received link is " + customlink);
-    var htmltext = GM_xmlhttpRequest({
+    GM_xmlhttpRequest({
         method: "GET",
         url: customlink,
-        synchronous: true
-    });
+	    onload: function(response) {
+        tot.resolve(response.responseText);
+         }
+		});
+	return tot.promise();
     //console.log(htmltext.responseText);
-    return htmltext.responseText;
+
 }
 
 //Only use this function to crawl Axiom and any other part of the system that would not require bypassing the cross origin policy (CORS)
@@ -246,18 +264,16 @@ function getDataxhr(customlink) {
 
 /*Function used to send a post request to a given URL. It is currently only used to fill the mapping details.*/
 function sendPost(customlink, instructions) {
-    console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
     console.log("Post to:"+customlink);
     console.log(instructions);
 
-    var postxhr = GM_xmlhttpRequest({
+    GM_xmlhttpRequest({
         method: "POST",
         url: customlink,
         data: instructions,
         headers: {
             "Content-Type": "application/x-www-form-urlencoded"
-        },
-        synchronous: true
+        }
     });
 }
 	

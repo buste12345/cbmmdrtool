@@ -1,5 +1,5 @@
 var async = require('async'),
-	keystone = require('keystone');
+    keystone = require('keystone');
 var fs = require('fs');
 var Mmdr = keystone.list('Mmdr');
 //var bodyParser = require('body-parser');
@@ -23,58 +23,63 @@ exports.list = function(req, res) {
  * Get mmdr by ID
  */
 exports.get = function(req, res) {
-	Mmdr.model.findById(req.params.mrdid).exec(function(err, item) {
-		
-		if (err) return res.apiError('database error', err);
-		if (!item) return res.apiError('not found');
-		
-		res.send({
-			post: item
-		});
-		
-	});
+    Mmdr.model.findById(req.params.mrdid).exec(function(err, item) {
+
+        if (err) return res.apiError('database error', err);
+        if (!item) return res.apiError('not found');
+
+        res.send({
+            post: item
+        });
+
+    });
 }
 
 /**
  * Get last pending MMDR
- */ 
+ */
 exports.getlast = function(req, res) {
-	Mmdr.model.findOne().where('state', 'pending').sort({createdAt: 1}).exec(function(err, item) {
-		
-		if (err) return res.apiError('database error', err);
-		if (!item) return res.apiError('not found');
-		if(req.query.assign == "true" && req.query.robotname)
-		{
-			console.log("Robot working on "+item.mrdid);
-			Mmdr.model.findOneAndUpdate({_id:item.id},{state:'progress',assignedBot:req.query.robotname}).exec(function(err, item) 
-			{
-				console.log(err);
-			});
-		}
-		
-		res.send({
-			did: item.id,
-			mrdid: item.mrdid,
-			state: item.state
-		});
-	});
+    Mmdr.model.findOne().where('state', 'pending').sort({
+        createdAt: 1
+    }).exec(function(err, item) {
+
+        if (err) return res.apiError('database error', err);
+        if (!item) return res.apiError('not found');
+        if (req.query.assign == "true" && req.query.robotname) {
+            console.log("Robot working on " + item.mrdid);
+            Mmdr.model.findOneAndUpdate({
+                _id: item.id
+            }, {
+                state: 'progress',
+                assignedBot: req.query.robotname
+            }).exec(function(err, item) {
+                console.log(err);
+            });
+        }
+
+        res.send({
+            did: item.id,
+            mrdid: item.mrdid,
+            state: item.state
+        });
+    });
 }
 
 /**
  * Bot home
- */ 
+ */
 exports.bothome = function(req, res) {
-	
-	res.send("This is your home bot.");
-	
+
+    res.send("This is your home bot.");
+
 }
 
 /**
  * Update mmdr MMDR
- */ 
+ */
 exports.updatemmdr = function(req, res) {
-	
-	/*fs.writeFile('jason.txt', req.body.accountm,  function(err) {
+
+    /*fs.writeFile('jason.txt', req.body.accountm,  function(err) {
 					 if (err) {
 				    return console.error(err);
 					 }
@@ -88,23 +93,24 @@ exports.updatemmdr = function(req, res) {
 			      console.log("Asynchronous read: " + data.toString());
 				  });
 			});*/
-	
-      				Mmdr.model.findOneAndUpdate({_id:req.body.did,state:'progress'},req.body).exec(function(err, item) 
-					{
-					
-						if(err)
-						{
-							console.log(err);
-					
-						}
-				
-						if(item)
-							res.send(item);
-						else
-							res.send("No item");
-			});
 
-	
+    Mmdr.model.findOneAndUpdate({
+        _id: req.body.did,
+        state: 'progress'
+    }, req.body).exec(function(err, item) {
+
+        if (err) {
+            console.log(err);
+
+        }
+
+        if (item)
+            res.send(item);
+        else
+            res.send("No item");
+    });
+
+
 }
 
 
@@ -112,19 +118,19 @@ exports.updatemmdr = function(req, res) {
  * Create a Post
  */
 exports.create = function(req, res) {
-	
-	var item = new Mmdr.model(),
-		data = (req.method == 'POST') ? req.body : req.query;
-	
-	item.getUpdateHandler(req).process(data, function(err) {
-		
-		if (err) return res.apiError('error', err);
-		
-		res.send({
-			post: item
-		});
-		
-	});
+
+    var item = new Mmdr.model(),
+        data = (req.method == 'POST') ? req.body : req.query;
+
+    item.getUpdateHandler(req).process(data, function(err) {
+
+        if (err) return res.apiError('error', err);
+
+        res.send({
+            post: item
+        });
+
+    });
 }
 
 /**
@@ -171,14 +177,14 @@ exports.remove = function(req, res) {
 	});
 } */
 
-exports.topley = function(idd,callback){
-	Mmdr.model.findOne({_id:idd}).exec(function(err, item) 
-	{
-		//console.log("frying pan");
-		//console.log(item);
-		if(item.state=="completed")
-		{
-		    callback();
-		}
+exports.topley = function(idd, callback) {
+    Mmdr.model.findOne({
+        _id: idd
+    }).exec(function(err, item) {
+        //console.log("frying pan");
+        //console.log(item);
+        if (item.state == "completed") {
+            callback();
+        }
     });
 }

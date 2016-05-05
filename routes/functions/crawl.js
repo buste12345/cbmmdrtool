@@ -6,38 +6,43 @@ const b = require('../api/mmdrs');
 //var keystone = require('keystone');
 //var Mmdr = keystone.list('Mmdr');
 
-function newJob (val,val2){
+//Creates new job in Kue
+function newJob(val, val2) {
 
-         var job = jobs.create('crawlmrdid',{mrdid:val,idd:val2});
-         //console.log(job);
-         job.save();
-    
+    var job = jobs.create('crawlmrdid', {
+        mrdid: val,
+        idd: val2
+    });
+    job.save();
+
 }
 
 
-jobs.process('crawlmrdid', 5, function (job, done){
+jobs.process('crawlmrdid', 5, function(job, done) {
 
- var timer = setInterval(function()
- {
+//Checks if MR DID is crawled each 5 seconds.
+    var timer = setInterval(function() {
 
-    console.log("lel  ",job.data.idd);
-    b.topley(job.data.idd,donedor);
-  
-   
- },5000);
- 
- var donedor = function(){
-    console.log('Job', job.id, 'is done. MR DID: ',job.data.mrdid);
-    clearInterval(timer);
-    done && done();  
- };
- 
- 
+        console.log("lel  ", job.data.idd);
+        b.topley(job.data.idd, donedor);
+
+
+    }, 5000);
+
+//Once the previous function is completed, the second phase will start.
+    var donedor = function() {
+        console.log('Job', job.id, ' phase 1 completed. MR DID: ', job.data.mrdid);
+        clearInterval(timer);
+        done && done();
+    };
+
+
 })
 
+//Export functions
 var methods = {};
-methods.newJob = function(val,val2){ 
-    newJob(val,val2);
+methods.newJob = function(val, val2) {
+    newJob(val, val2);
 };
 
 module.exports = methods;

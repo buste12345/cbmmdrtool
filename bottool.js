@@ -173,13 +173,26 @@ var robotno="1";
 	var fieldmapping = "http://mapping.careerbuilder.com/Atlas/FieldMappings.aspx?ReqStatus=Complete&MapRequestDID="+mrdid;
 	
 	$.when(getDatacors(mappingdetails),getDatacors(mappingjoournal),getDatacors(tcsetup),getDatacors(clientdefault),getDatacors(fieldmapping)).done(function(rmappingdetails,rmappingjoournal,rtcsetup,rclientdefault,rfieldmapping){
-	    var accountm = "http://boss/Axiom/Account/AccountView.aspx?Acct_DID="+(((rmappingdetails.split("Acct_DID=")[1])).split('"')[0]);
+	    var accountm = "http://boss.careerbuilder.com/Axiom/Account/AccountView.aspx?Acct_DID="+(((rmappingdetails.split("Acct_DID=")[1])).split('"')[0]);
         var batch1 = "http://dpi.careerbuilder.com/site/support/finddpiuser/BatchResultsV2.aspx?EmailType=Poster&FileType=Batch&Email=" + ((((rclientdefault.split("CBPosterEmail</td>")[1]).split("</td>"))[0]).split("<td>"))[1];
-        console.log("clup");
+        console.log("KLAP");
 	   
 	   $.when(getDatacors(accountm),getDatacors(batch1)).done(function(raccountm,rbatch1){
-	       	    var accountproduct = "http://boss/Axiom/Account/AccountProductView.aspx?Acct_DID="+(((raccountm.split("AccountProductView.aspx?Acct_DID="))[1]).split('"')[0]);
-                var batch2 = "http://dpi.careerbuilder.com/site/support/finddpiuser/"+decoderr((rbatch1.split('mxdlBatchLog__ctl1_lnkViewBatch" href="')[1]).split('"')[0]);
+	            console.log("Chamgs");
+	       	    var accountproduct = "http://boss.careerbuilder.com/Axiom/Account/AccountProductView.aspx?Acct_DID="+(((raccountm.split("AccountProductView.aspx?Acct_DID="))[1]).split('"')[0]);
+                console.log("Chamgs2");
+                var batch2;
+                if(checks(rbatch1,'mxdlBatchLog__ctl1_lnkViewBatch'))
+                {
+                    console.log("CTrue");
+                    batch2= "http://dpi.careerbuilder.com/site/support/finddpiuser/"+decoderr((rbatch1.split('mxdlBatchLog__ctl1_lnkViewBatch" href="')[1]).split('"')[0]);
+                }
+                else
+                {
+                    console.log("CFalse");
+                    batch2= "http://dpi.careerbuilder.com";
+                }
+                console.log("clup 2");
                 $.when(getDatacors(accountproduct),getDatacors(batch2)).done(function(raccountproduct,rbatch2){
 	                 sendPost('http://mmdrtoolsadv-buste12345.c9users.io:8080/api/mmdr/updatemmdr','did='+id+'&mappingdetails='+escape(rmappingdetails)+'&journal='+escape(rmappingjoournal)+'&accountm='+escape(raccountm)+'&accountproduct='+escape(raccountproduct)+'&tcsetup='+escape(rtcsetup)+'&defaultt='+escape(rclientdefault)+'&fieldmapping='+escape(rfieldmapping)+'&batch='+escape(rbatch1)+'&batch2='+escape(rbatch2)+'&state=completed');
 	               console.log("MR DID: "+mrdid+" is now completed.");

@@ -4,6 +4,7 @@ var fs = require('fs');
 var Mmdr = keystone.list('Mmdr');
 var Review = keystone.list('Review');
 var cheerio = require('cheerio');
+var qs = require('querystring');
 //var bodyParser = require('body-parser');
 
 /**
@@ -205,8 +206,17 @@ exports.parsemr = function(idd, callback, callback2) {
 
 //Function to verify mmdr
 exports.verifymmdr = function(val1, val2, val3, callback) {
-
-    var segments = val3.split("3Ctd%20style%3D%22font-weight%3Abold%3B%22");
+    var segments;
+    if(val3.toLowerCase().indexOf("%3c") != -1)
+    {
+        console.log("Already encoded");
+        segments = val3.split("3Ctd%20style%3D%22font-weight%3Abold%3B%22");
+    }
+    else
+    {
+        console.log("Not encoded");
+        segments = (qs.escape(val3)).split("3Ctd%20style%3D%22font-weight%3Abold%3B%22");
+    }
     var date;
     var note;
     
@@ -214,6 +224,8 @@ exports.verifymmdr = function(val1, val2, val3, callback) {
     {
         date= ((segments[i].split("%3E"))[1]).split("%20")[0];
         note= ((segments[i].split("%3Ctr%20style%3D%22background-color%3A%23FFFFFF%3B%22%3E"))[1]);
+        
+        date = date.replace(/%2F/g,"/");
         
         if(note.toLowerCase().indexOf("mmdr") != -1||note.toLowerCase().indexOf("monthly%20review") != -1)
         {

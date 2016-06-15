@@ -1,6 +1,7 @@
 var async = require('async'),
 keystone = require('keystone');
 var Mmdr = keystone.list('Mmdr');
+var Review = keystone.list('Review');
 var uuid = require('node-uuid');
 const a = require('../functions/mmdrcheck');
 
@@ -22,13 +23,40 @@ exports = module.exports = function(req, res) {
 	
 	var callgroupdid = function (val, callback){
 		//console.log(mrdids[0]);
-		callback(val);
+		
+		var q = keystone.list('Mmdr').model.find({groupid:val}).select("mrdid state journal");
+		
+		q.exec(function(err, results) {
+			callback(results);
+			if(err)
+				console.log(err);
+		});
+		
 	};
 
 	if(req.body.action == "START" && req.params.groupid)
 	{
-		//callgroupdid(req.body.groupid,function(val){		});
-		console.log("tak");
+		callgroupdid(req.params.groupid,function(val){
+			
+			//console.log(val[0].mrdid);
+			for(var i=0;i<val.length;i++)
+			{
+				var newReview = new Review.model({
+				 mrdid: val[i].mrdid,
+				 status: "In progress...",
+				 groupid: req.params.groupid,
+				 checkedby: ""
+				});
+				
+				newReview.save(function(err) {
+					 // Review has been saved
+					 console.log(err);
+				});
+			
+			a.newReview(req.params.groupid, val[i].mrdid, val[i].journal);
+			}
+		});
+		
 	}
 
 /*	

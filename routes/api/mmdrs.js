@@ -2,6 +2,7 @@ var async = require('async'),
     keystone = require('keystone');
 var fs = require('fs');
 var Mmdr = keystone.list('Mmdr');
+var Review = keystone.list('Review');
 var cheerio = require('cheerio');
 //var bodyParser = require('body-parser');
 
@@ -200,4 +201,42 @@ exports.parsemr = function(idd, callback, callback2) {
             callback2(callback);
         }
     });
+}
+
+//Function to verify mmdr
+exports.verifymmdr = function(val1, val2, val3, callback) {
+
+    var segments = val3.split("3Ctd%20style%3D%22font-weight%3Abold%3B%22");
+    var date;
+    var note;
+    
+    for(var i=1;i<segments.length;i++)
+    {
+        date= ((segments[i].split("%3E"))[1]).split("%20")[0];
+        note= ((segments[i].split("%3Ctr%20style%3D%22background-color%3A%23FFFFFF%3B%22%3E"))[1]);
+        
+        if(note.toLowerCase().indexOf("mmdr") != -1||note.toLowerCase().indexOf("monthly%20review") != -1)
+        {
+            note= "MMDR note added on "+date;
+            break;
+        }
+        else
+        {
+            note = "Not found at all."
+        }
+        
+    }
+    
+    console.log("Note: "+note);
+    console.log("Date: "+date);
+
+    Review.model.findOneAndUpdate({
+        mrdid: val2,
+        groupid: val1
+    }, {status:note,checkedby:'guest'}).exec(function(err, item) {
+            callback();
+            if(err)
+                console.log(err);
+    });
+    
 }

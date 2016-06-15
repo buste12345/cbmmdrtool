@@ -7,10 +7,12 @@ const b = require('../api/mmdrs');
 //var Mmdr = keystone.list('Mmdr');
 
 //Creates new job in Kue
-function newJob(val) {
+function newReview(val, val2, val3) {
 
     var job = jobs.create('mmdrcheck', {
-        groupdid: val
+        groupid: val,
+        mrdid: val2,
+        journal: val3
     });
     job.save();
 
@@ -19,34 +21,30 @@ function newJob(val) {
 
 jobs.process('mmdrcheck', 5, function(job, done) {
 
-//Checks if MR DID is crawled each 5 seconds.
-    var timer = setInterval(function() {
+        //Main task to verify mmdr.
+        var donedor = function() {
+            console.log('Verified MR DID: ', job.data.mrdid);
+            done && done();
+        };
+    
+        b.verifymmdr(job.data.groupid, job.data.mrdid, job.data.journal, donedor);
 
-        console.log("lel  ", job.data.idd);
-        //b.topley(job.data.idd, donedor, parsemr);
 
+/*Second phase (not needed for mmdr check yet)
 
-    }, 5000);
-
-//Once the previous function is completed, the second phase will start.
-    var donedor = function() {
-        console.log('Job', job.id, ' phase 1 completed. MR DID: ', job.data.mrdid);
-        clearInterval(timer);
-        
-    };
-//Parsing phase
     var parsemr = function(callback) {
         callback();
-        console.log('Job', job.id, ' phase 2 starting. MR DID: ', job.data.mrdid);
+        console.log('Verified MR DID: ', job.data.mrdid);
         done && done();
     };
+    */
 
-})
+});
 
 //Export functions
 var methods = {};
-methods.newJob = function(val) {
-    newJob(val);
+methods.newReview = function(val, val2, val3) {
+    newReview(val, val2, val3);
 };
 
 module.exports = methods;

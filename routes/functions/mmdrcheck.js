@@ -7,24 +7,23 @@ const b = require('../api/mmdrs');
 //var Mmdr = keystone.list('Mmdr');
 
 //Creates new job in Kue
-function newJob(val, val2) {
+function newJob(val) {
 
-    var job = jobs.create('crawlmrdid', {
-        mrdid: val,
-        idd: val2
+    var job = jobs.create('mmdrcheck', {
+        groupdid: val
     });
     job.save();
 
 }
 
 
-jobs.process('crawlmrdid', 5, function(job, done) {
+jobs.process('mmdrcheck', 5, function(job, done) {
 
 //Checks if MR DID is crawled each 5 seconds.
     var timer = setInterval(function() {
 
         console.log("lel  ", job.data.idd);
-        b.topley(job.data.idd, donedor, parsemr);
+        //b.topley(job.data.idd, donedor, parsemr);
 
 
     }, 5000);
@@ -46,8 +45,8 @@ jobs.process('crawlmrdid', 5, function(job, done) {
 
 //Export functions
 var methods = {};
-methods.newJob = function(val, val2) {
-    newJob(val, val2);
+methods.newJob = function(val) {
+    newJob(val);
 };
 
 module.exports = methods;

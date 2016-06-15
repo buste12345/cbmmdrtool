@@ -2,6 +2,7 @@ var async = require('async'),
     keystone = require('keystone');
 var fs = require('fs');
 var Mmdr = keystone.list('Mmdr');
+var cheerio = require('cheerio');
 //var bodyParser = require('body-parser');
 
 /**
@@ -177,14 +178,26 @@ exports.remove = function(req, res) {
 	});
 } */
 
-exports.topley = function(idd, callback) {
+exports.topley = function(idd, callback, callback2) {
     Mmdr.model.findOne({
         _id: idd
     }).exec(function(err, item) {
         //console.log("frying pan");
         //console.log(item);
         if (item.state == "completed") {
-            callback();
+            callback2(callback);
+        }
+    });
+}
+
+exports.parsemr = function(idd, callback, callback2) {
+    Mmdr.model.findOne({
+        _id: idd
+    }).exec(function(err, item) {
+        //console.log("frying pan");
+        //console.log(item);
+        if (item.state == "completed") {
+            callback2(callback);
         }
     });
 }

@@ -7,11 +7,17 @@ block content
 			if !data.mmdrs
 				h3.text-muted Error. No results.
 			else
-				table
+				table(class="pure-table")
 					thead
+						tr
+							th Group ID
+							th 
+							th 
 					tbody
 					for mmdr in data.mmdrs
 						tr
 							td= mmdr
 							td
 								a(href='/mgui') Crawl
+							td
+								a(href='/checkgui/'+mmdr) Verify MMDRs

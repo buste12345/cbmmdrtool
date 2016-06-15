@@ -28,7 +28,8 @@ exports.initLocals = function(req, res, next) {
 		{ label: 'Mmdr',		key: 'mmdr',		href: '/mmdr' },
 		{ label: 'Blog',		key: 'blog',		href: '/blog' },
 		{ label: 'Mmdr tool',		key: 'mtool',		href: '/mgui' },
-		{ label: 'Mmdr dashboard',		key: 'mdashboard',		href: '/mdashboard' }
+		{ label: 'Mmdr dashboard',		key: 'mdashboard',		href: '/mdashboard' },
+		{ label: 'Mmdr check dashboard',		key: 'checkmmdrgui',		href: '/checkgui' }
 		
 	];
 	

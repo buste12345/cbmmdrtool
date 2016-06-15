@@ -45,6 +45,8 @@ exports = module.exports = function(app) {
 	
 	/*mmdr gui*/
 	app.all('/mgui', routes.views.mmdrgui);
+	/*Check mmdr gui*/
+	app.all('/checkgui/:groupid?', routes.views.checkmmdrgui);
 	
 	/*API VIEWS*/
 	app.get('/api/post/list', keystone.middleware.api, routes.api.posts.list);

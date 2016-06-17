@@ -17,7 +17,7 @@ Review.add({
 	tsubmitted: { type: String },
 	groupid: { type: String },
 	checkedby: {type: String},
-	checkedby2: {Type: String }
+	checkedby2: {type: String }
 });
 
 /*

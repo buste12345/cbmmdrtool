@@ -236,26 +236,28 @@ exports.verifymmdr = function(val1, val2, val3, callback, val4) {
         
         if(note.toLowerCase().indexOf("mmdr") != -1||note.toLowerCase().indexOf("monthly%20review") != -1)
         {
-            checkedbyv = ((segments[i].split("%20PM%20%20"))[1]).split("%3C")[0];
+            checkedbyv = ((segments[i].split("%20%20"))[1]).split("%3C")[0];
             note= "MMDR note added on "+date;
             break;
         }
         else
         {
-            note = "Not found at all."
-            if(note.toLowerCase().indexOf("Mapping%20Issue%3A") != -1 && switcho == true)
+            
+            
+            if(note.toLowerCase().indexOf("mapping%20issue%3a") != -1 && switcho == true)
             {
                 lastticket = "Mapping issue ticket submitted on: "+date;
-                checkedbyv2 = ((segments[i].split("%20PM%20%20"))[1]).split("%3C")[0];
+                checkedbyv2 = ((segments[i].split("%20%20"))[1]).split("%3C")[0];
                 switcho = false;
             }
             
-            if(note.toLowerCase().indexOf("Mapping%20Change%20Request%3A") != -1 && switcho == true)
+            if(note.toLowerCase().indexOf("mapping%20change%20request%3a") != -1 && switcho == true)
             {
                 lastticket = "Change request ticket submitted on: "+date;
-                checkedbyv2 = ((segments[i].split("%20PM%20%20"))[1]).split("%3C")[0];
+                checkedbyv2 = ((segments[i].split("%20%20"))[1]).split("%3C")[0];
                 switcho = false;
             }
+            note = "Not found at all.";
         }
         
     }
@@ -264,8 +266,7 @@ exports.verifymmdr = function(val1, val2, val3, callback, val4) {
     console.log("Date: "+date);
 
     Review.model.findOneAndUpdate({
-        _id: val4,
-        groupid: val1
+        _id: val4
     }, {status:note,checkedby:checkedbyv,tsubmitted:lastticket,checkedby2:checkedbyv2}).exec(function(err, item) {
             callback();
             if(err)

@@ -27,6 +27,12 @@ exports = module.exports = function(req, res) {
 
 	if(req.body.mrdids)
 	{
+		var taskv = "";
+		if(req.body.verify == "Journal")
+			taskv = "Journal";
+		else
+			taskv = "crawlall";
+		
 		storemr(req.body.mrdids,function(val){
 			var uuid4 = uuid.v4();
 			locals.data.groupid = uuid4;
@@ -36,6 +42,7 @@ exports = module.exports = function(req, res) {
 			     var newMr = new Mmdr.model({
 				 mrdid: val[i],
 				 state: 'pending',
+				 task: taskv,
 				 groupid: uuid4
 				});
 				

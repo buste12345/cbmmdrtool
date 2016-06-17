@@ -25,7 +25,8 @@ Mmdr.add({
 	state: { type: String },
 	groupid: { type: String },
 	createdAt: { type: Date, default: Date.now },
-	assignedBot: { type: String }
+	assignedBot: { type: String },
+	task: {type: String }
 });
 
 /*

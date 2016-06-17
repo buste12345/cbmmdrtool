@@ -21,6 +21,12 @@ exports = module.exports = function(req, res) {
 		var q = keystone.list('Mmdr').model.find().distinct("groupid");
 		
 		q.exec(function(err, results) {
+			
+			/*keystone.list('Mmdr').model.find({'groupid':results[0]}).distinct("state").exec(function(err,results2)
+			{
+				console.log(results2);
+			});*/
+			console.log(results);
 			locals.data.mmdrs = results;
 			next(err);
 		});

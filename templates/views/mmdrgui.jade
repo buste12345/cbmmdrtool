@@ -11,7 +11,9 @@ block content
 						textarea(name="mrdids", cols="40", rows="10")
 					div.actions
 						input(type="submit", value="Add")
+						input(type="submit", name="verify", value="Journal")
 			else
 				p= ('ID ASSIGNED IS: ' + data.groupid)
+				a(href='/checkgui/'+data.groupid+'?results=mmdrt') Check results
 				
 

@@ -157,14 +157,17 @@ var robotno="1";
 		if(!checks(mrfirst,"error"))
 		    {
 		        console.log("Ping success");
-			    callback((mrfirst.split('"mrdid":"')[1].split('"'))[0],(mrfirst.split('"did":"')[1].split('"'))[0]);
+			    callback((mrfirst.split('"mrdid":"')[1].split('"'))[0],(mrfirst.split('"did":"')[1].split('"'))[0],(mrfirst.split('"task":"')[1].split('"'))[0]);
 		    }
 		});
 		},5000);
 		
 	};
 	
-	var processmr = function(mrdid,id){
+	var processmr = function(mrdid,id,task){
+	   
+    if(task=="crawlall")
+    {
 	   
 	var mappingdetails = "http://boss.careerbuilder.com/Axiom/AxiomDPI/MapRequest/MapRequestView.aspx?CBMapRequest_DID="+mrdid;
 	var mappingjoournal = "http://boss.careerbuilder.com/Axiom/AxiomDPI/MapRequest/MapRequestViewJournal.aspx?CBMapRequestJournal_TargetDID="+mrdid;
@@ -201,6 +204,18 @@ var robotno="1";
 
 
 	});
+    }
+    else
+    {
+        if(task=="Journal")
+        {
+            var mappingjoournal = "http://boss.careerbuilder.com/Axiom/AxiomDPI/MapRequest/MapRequestViewJournal.aspx?CBMapRequestJournal_TargetDID="+mrdid;
+             $.when(getDatacors(mappingjoournal)).done(function(journal){
+                 sendPost('http://mmdrtoolsadv-buste12345.c9users.io:8080/api/mmdr/updatemmdr','did='+id+'&journal='+escape(journal)+'&state=completed');
+	               console.log("MR DID: "+mrdid+" is now completed.");
+             });
+        }
+    }
 };
     //ACTIVATE BOT FUNCTIONALITY
     signalrec(processmr);

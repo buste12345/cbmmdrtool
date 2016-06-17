@@ -14,8 +14,10 @@ var Review = new keystone.List('Review', {
 Review.add({
 	mrdid: { type: String, required: true },
 	status: { type: String },
+	tsubmitted: { type: String },
 	groupid: { type: String },
-	checkedby: {type: String}
+	checkedby: {type: String},
+	checkedby2: {Type: String }
 });
 
 /*

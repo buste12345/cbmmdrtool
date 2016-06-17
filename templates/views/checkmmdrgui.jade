@@ -16,14 +16,36 @@ block content
 					thead
 						tr
 							th MR DID
-							th Status
-							th 
+							if (data.res=="mmdrv")
+								th MMDR note
+								th By
+								th Last ticket
+								th By
+							else
+								th Status
 					each item in data.mrgroup
 						tr(class=(i % 2 == 0) ? 'odd' : 'even') 
 							td= item.mrdid
-							td= item.status	
-							td
-				form(name="check-mmdrs", method="post",action="/checkgui/"+data.groupid)
-					input(name="action",type="submit", value='START')
+							if (data.res=="mmdrv")
+								td= item.status
+								td= item.checkedby
+								td= item.tsubmitted
+								td= item.checkedby2
+							else
+								td= item.state
+				if (data.res=="mmdrv") 
+					form(name="check-mmdrs", method="post",action="/checkgui/"+data.groupid+'?results=mmdrv')
+						br
+						p
+							a(href='/checkgui/'+data.groupid+'?results=mmdrv') Refresh this page
+						p
+							input(name="action",type="submit", value='START')
+				if (data.res=="mmdrt")
+					br
+					p
+						a(href='javascript:location.reload(true)') Refresh this page
+					p
+						a(href='/checkgui/'+data.groupid+'?results=mmdrv') Verify MMDRs now
+				
 			
 

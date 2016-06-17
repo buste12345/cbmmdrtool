@@ -13,11 +13,13 @@ block content
 							th Group ID
 							th 
 							th 
+							th State
 					tbody
 					for mmdr in data.mmdrs
 						tr
 							td= mmdr
 							td
-								a(href='/mgui') Crawl
+								a(href='/checkgui/'+mmdr+'?results=mmdrt') View results
 							td
-								a(href='/checkgui/'+mmdr) Verify MMDRs
+								a(href='/checkgui/'+mmdr+'?results=mmdrv') Verify MMDRs
+							td 

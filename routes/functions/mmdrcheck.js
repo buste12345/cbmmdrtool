@@ -7,12 +7,13 @@ const b = require('../api/mmdrs');
 //var Mmdr = keystone.list('Mmdr');
 
 //Creates new job in Kue
-function newReview(val, val2, val3) {
+function newReview(val, val2, val3, val4) {
 
     var job = jobs.create('mmdrcheck', {
         groupid: val,
         mrdid: val2,
-        journal: val3
+        journal: val3,
+        objid: val4
     });
     job.save();
 
@@ -27,7 +28,7 @@ jobs.process('mmdrcheck', 5, function(job, done) {
             done && done();
         };
     
-        b.verifymmdr(job.data.groupid, job.data.mrdid, job.data.journal, donedor);
+        b.verifymmdr(job.data.groupid, job.data.mrdid, job.data.journal, donedor, job.data.objid);
 
 
 /*Second phase (not needed for mmdr check yet)
@@ -43,8 +44,8 @@ jobs.process('mmdrcheck', 5, function(job, done) {
 
 //Export functions
 var methods = {};
-methods.newReview = function(val, val2, val3) {
-    newReview(val, val2, val3);
+methods.newReview = function(val, val2, val3, val4) {
+    newReview(val, val2, val3, val4);
 };
 
 module.exports = methods;

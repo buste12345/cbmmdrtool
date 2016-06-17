@@ -63,6 +63,7 @@ exports.getlast = function(req, res) {
         res.send({
             did: item.id,
             mrdid: item.mrdid,
+            task: item.task,
             state: item.state
         });
     });
@@ -186,7 +187,7 @@ exports.topley = function(idd, callback, callback2) {
     }).exec(function(err, item) {
         //console.log("frying pan");
         //console.log(item);
-        if (item.state == "completed") {
+        if (item.state == "completed" && item.state !=null) {
             callback2(callback);
         }
     });
@@ -205,7 +206,7 @@ exports.parsemr = function(idd, callback, callback2) {
 }
 
 //Function to verify mmdr
-exports.verifymmdr = function(val1, val2, val3, callback) {
+exports.verifymmdr = function(val1, val2, val3, callback, val4) {
     var segments;
     if(val3.toLowerCase().indexOf("%3c") != -1)
     {
@@ -219,22 +220,42 @@ exports.verifymmdr = function(val1, val2, val3, callback) {
     }
     var date;
     var note;
+    var checkedbyv = "";
+    var lastticket = "";
+    var checkedbyv2 = "";
+    var switcho = true;
     
     for(var i=1;i<segments.length;i++)
     {
         date= ((segments[i].split("%3E"))[1]).split("%20")[0];
         note= ((segments[i].split("%3Ctr%20style%3D%22background-color%3A%23FFFFFF%3B%22%3E"))[1]);
+        //note= ((segments[i].split("%3Ctd%20style%3D%22font-weight%3Abold%3B%22%3E"))[1]);
+        
         
         date = date.replace(/%2F/g,"/");
         
         if(note.toLowerCase().indexOf("mmdr") != -1||note.toLowerCase().indexOf("monthly%20review") != -1)
         {
+            checkedbyv = ((segments[i].split("%20PM%20%20"))[1]).split("%3C")[0];
             note= "MMDR note added on "+date;
             break;
         }
         else
         {
             note = "Not found at all."
+            if(note.toLowerCase().indexOf("Mapping%20Issue%3A") != -1 && switcho == true)
+            {
+                lastticket = "Mapping issue ticket submitted on: "+date;
+                checkedbyv2 = ((segments[i].split("%20PM%20%20"))[1]).split("%3C")[0];
+                switcho = false;
+            }
+            
+            if(note.toLowerCase().indexOf("Mapping%20Change%20Request%3A") != -1 && switcho == true)
+            {
+                lastticket = "Change request ticket submitted on: "+date;
+                checkedbyv2 = ((segments[i].split("%20PM%20%20"))[1]).split("%3C")[0];
+                switcho = false;
+            }
         }
         
     }
@@ -243,9 +264,9 @@ exports.verifymmdr = function(val1, val2, val3, callback) {
     console.log("Date: "+date);
 
     Review.model.findOneAndUpdate({
-        mrdid: val2,
+        _id: val4,
         groupid: val1
-    }, {status:note,checkedby:'guest'}).exec(function(err, item) {
+    }, {status:note,checkedby:checkedbyv,tsubmitted:lastticket,checkedby2:checkedbyv2}).exec(function(err, item) {
             callback();
             if(err)
                 console.log(err);

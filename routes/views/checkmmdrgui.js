@@ -48,12 +48,13 @@ exports = module.exports = function(req, res) {
 				 checkedby: ""
 				});
 				
-				newReview.save(function(err) {
+				newReview.save(function(err, item) {
 					 // Review has been saved
 					 console.log(err);
+					 
 				});
+				a.newReview(req.params.groupid, val[i].mrdid, val[i].journal, newReview.id);
 			
-			a.newReview(req.params.groupid, val[i].mrdid, val[i].journal);
 			}
 		});
 		
@@ -67,14 +68,30 @@ exports = module.exports = function(req, res) {
 */
 	view.on('init', function(next) {
 		
+		if(req.query.results == "mmdrv")
+		{
 		var q = keystone.list('Review').model.find({groupid:req.params.groupid});
 		
 		q.exec(function(err, results) {
 			locals.data.mrgroup = results;
 			locals.data.groupid = req.params.groupid;
+			locals.data.res = req.query.results;
 			next(err);
 		});
+		}
 		
+		if(req.query.results == "mmdrt")
+		{
+		var q = keystone.list('Mmdr').model.find({groupid:req.params.groupid});
+		
+		q.exec(function(err, results) {
+			locals.data.mrgroup = results;
+			locals.data.groupid = req.params.groupid;
+			locals.data.res = req.query.results;
+			next(err);
+		});
+		}
+
 	});
 	
 	// Render the view
